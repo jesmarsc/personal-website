@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import Banner from "../components/Banner/banner"
 import Projects from "../components/Projects/projects"
 import About from "../components/About/about"
-import Navbar from "../components/Navigation/Navbar"
+import Navbar from "../components/Navigation/navbar"
 import "antd/dist/antd.css"
 import { Affix, Typography } from "antd"
 
