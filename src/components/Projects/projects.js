@@ -1,11 +1,9 @@
 import React from "react"
-import { Card, Row, Col, Typography, Icon } from "antd"
+import { Card, Row, Col, Icon } from "antd"
 
 const projects = () => {
   return (
-    <div style={{ background: "#11171b", padding: "30px" }}>
-      <Typography style={{ color: "white" }}>Personal Projects.</Typography>
-
+    <div style={{ padding: "30px" }}>
       <Row type="flex" justify="space-around" align="middle" gutter={16}>
         <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
           <Card
@@ -24,8 +22,6 @@ const projects = () => {
           <Card
             style={{
               color: "white",
-              background:
-                "linear-gradient(0deg, rgba(253,187,45,1) 0%, rgba(251,61,152,1) 99%, rgba(232,7,201,1) 100%)",
             }}
             actions={[
               <Icon type="github" key="github" />,

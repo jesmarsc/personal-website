@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Typography, Button, Icon } from "antd"
+import { Row, Col, Button } from "antd"
 import ButtonGroup from "antd/lib/button/button-group"
 import style from "./banner.module.css"
 
@@ -11,8 +11,7 @@ const banner = () => {
       align="middle"
       style={{
         height: "100vh",
-        backgroundImage:
-          "url(https://wallpapersite.com/images/pages/pic_h/13023.png)",
+        backgroundImage: "url(https://i.imgur.com/OpZLXyL.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -21,12 +20,15 @@ const banner = () => {
         <h1 className={style.banner}>
           <strong>Jesmar.</strong>
         </h1>
-        <ButtonGroup style={{ marginBottom: "200px" }}>
+        <ButtonGroup style={{}}>
           <Button size="large" ghost icon="github">
             Github
           </Button>
           <Button size="large" ghost icon="linkedin">
             Linkedin
+          </Button>
+          <Button size="large" ghost icon="linkedin">
+            Resume
           </Button>
         </ButtonGroup>
       </Col>

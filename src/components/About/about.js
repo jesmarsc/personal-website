@@ -1,37 +1,41 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Row, Col, Typography } from "antd"
+import Lottie from "react-lottie"
+import animationData from "../../assets/about.json"
 
-const about = () => {
-  const { Title, Paragraph, Text } = Typography
+const about = ({ src }) => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  }
+  const { Title, Paragraph } = Typography
   return (
-    <Row
-      style={{ margin: "0", paddingTop: "128px", backgroundColor: "#11171b" }}
-      type="flex"
-      justify="center"
-      gutter={32}
-    >
-      <Col lg={8}>
-        <img
-          style={{
-            width: "auto",
-            height: "auto",
-            maxWidth: "100%",
-            maxHeight: "100%",
-            borderRadius: "25px",
-          }}
-          src="https://cdn.pixabay.com/photo/2017/06/21/09/24/retro-2426631_960_720.png"
-        />
-      </Col>
-      <Col lg={8}>
-        <Typography>
-          <Title style={{ color: "white" }}>About Me</Title>
-          <Paragraph strong style={{ color: "white" }}>
-            B.S. in Computer Engineering - UCSB 2019
-          </Paragraph>
-          <Paragraph style={{ color: "white" }}></Paragraph>
-        </Typography>
-      </Col>
-    </Row>
+    <Fragment>
+      <Row
+        style={{
+          margin: "0",
+          padding: "64px",
+        }}
+        type="flex"
+        justify="center"
+        gutter={32}
+      >
+        <Col lg={8}></Col>
+        <Col lg={8}>
+          <Typography>
+            <Title style={{ color: "white" }}>About Me</Title>
+            <Paragraph strong style={{ color: "white" }}>
+              B.S. in Computer Engineering - UCSB 2019
+            </Paragraph>
+            <Paragraph style={{ color: "white" }}></Paragraph>
+          </Typography>
+        </Col>
+      </Row>
+    </Fragment>
   )
 }
 
