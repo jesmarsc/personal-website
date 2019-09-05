@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { Affix, BackTop } from "antd"
+import { Affix, BackTop, Layout } from "antd"
 import {
   Banner,
   Navbar,
@@ -23,5 +23,14 @@ export default () => (
     <Projects />
     <Skills />
     <BackTop />
+    <Layout.Footer
+      style={{
+        height: "25vh",
+        background:
+          "linear-gradient(0deg, rgba(39,34,98,1) 0%, rgba(42,78,134,1) 25%, rgba(45,112,161,1) 50%, rgba(50,167,205,1) 100%)",
+      }}
+    >
+      Greetings
+    </Layout.Footer>
   </Fragment>
 )

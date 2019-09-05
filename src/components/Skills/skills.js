@@ -1,26 +1,53 @@
 import React from "react"
-import { Row, Col, Typography, Icon } from "antd"
-import SvgGatsby from "../Icons/SvgGatsby"
+import { Row, Col, Typography } from "antd"
+import {
+  IconText,
+  SvgGatsby,
+  SvgJava,
+  SvgMysql,
+  SvgReact,
+  SvgSpring,
+} from "../Icons/iconExports"
 
-const GatsbyIcon = props => <Icon component={SvgGatsby} {...props} />
 const skills = () => {
   const titleStyle = {
     color: "white",
     textAlign: "center",
   }
+  const iconStyle = {
+    margin: "12px",
+    color: "black",
+    fontSize: "3em",
+  }
+  const colStyle = {
+    textAlign: "center",
+  }
   return (
-    <div style={{ backgroundColor: "#32a7cd" }}>
+    <div style={{ padding: "32px", backgroundColor: "#32a7cd" }}>
       <Typography.Title style={titleStyle}>Technologies</Typography.Title>
 
       <Row justify="space-around" type="flex">
-        <Col style={{ textAlign: "center" }} lg={6}>
+        <Col style={colStyle} sm={24} lg={6}>
           <Typography.Title style={titleStyle}>Front-End</Typography.Title>
-          <GatsbyIcon style={{ fontSize: "64px" }} />
-          <span style={{ margin: "12px", color: "black", fontSize: "4.5em" }}>
-            <strong>Gatsby</strong>
-          </span>
+          <IconText style={iconStyle} component={SvgReact}>
+            React
+          </IconText>
+          <IconText style={iconStyle} component={SvgGatsby}>
+            Gatsby
+          </IconText>
         </Col>
-        <Col lg={4}></Col>
+        <Col style={colStyle} sm={24} lg={6}>
+          <Typography.Title style={titleStyle}>Back-End</Typography.Title>
+          <IconText style={iconStyle} component={SvgJava}>
+            Java
+          </IconText>
+          <IconText style={iconStyle} component={SvgSpring}>
+            Spring
+          </IconText>
+          <IconText style={iconStyle} component={SvgMysql}>
+            MySql
+          </IconText>
+        </Col>
       </Row>
     </div>
   )

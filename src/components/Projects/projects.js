@@ -9,7 +9,7 @@ const projects = () => {
       style={{
         background:
           "linear-gradient(0deg, rgba(50,167,205,1) 0%, rgba(45,112,161,1) 25%, rgba(42,78,134,1) 50%, rgba(39,34,98,1) 100%)",
-        padding: "30px",
+        padding: "32px",
       }}
     >
       <Typography.Title style={{ textAlign: "center", color: "white" }}>
