@@ -4,7 +4,9 @@ import Projects from "../components/Projects/projects"
 import About from "../components/About/about"
 import Navbar from "../components/Navigation/navbar"
 import "antd/dist/antd.css"
-import { Affix, Typography } from "antd"
+import { Affix, Typography, BackTop } from "antd"
+
+import myImage from "../assets/ucsb-me-solo-min.jpg"
 
 document.body.style.backgroundColor = "#272262"
 
@@ -15,10 +17,11 @@ export default () => (
       <Navbar />
     </Affix>
 
-    <About src="https://media.giphy.com/media/gzROsII7swwrm/giphy.gif" />
+    <About src={myImage} />
     <Typography.Title style={{ textAlign: "center", color: "white" }}>
       Projects
     </Typography.Title>
     <Projects />
+    <BackTop />
   </Fragment>
 )

@@ -2,6 +2,7 @@ import React from "react"
 import { Row, Col, Button } from "antd"
 import ButtonGroup from "antd/lib/button/button-group"
 import style from "./banner.module.css"
+import resume from "../../assets/resume.pdf"
 
 const banner = () => {
   return (
@@ -21,13 +22,31 @@ const banner = () => {
           <strong>Jesmar.</strong>
         </h1>
         <ButtonGroup style={{}}>
-          <Button size="large" ghost icon="github">
+          <Button
+            href="https://github.com/jesmarsc"
+            target="_blank"
+            size="large"
+            ghost
+            icon="github"
+          >
             Github
           </Button>
-          <Button size="large" ghost icon="linkedin">
+          <Button
+            href="https://www.linkedin.com/in/jesmar-castillo-997336109/"
+            target="_blank"
+            size="large"
+            ghost
+            icon="linkedin"
+          >
             Linkedin
           </Button>
-          <Button size="large" ghost icon="linkedin">
+          <Button
+            href={resume}
+            target="_blank"
+            size="large"
+            ghost
+            icon="file-pdf"
+          >
             Resume
           </Button>
         </ButtonGroup>

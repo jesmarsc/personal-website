@@ -1,5 +1,7 @@
 import React from "react"
 import { Card, Row, Col, Icon } from "antd"
+import konektCover from "../../assets/konekt-provider.png"
+import kube3dCover from "../../assets/kube3d-render.png"
 
 const projects = () => {
   return (
@@ -7,6 +9,7 @@ const projects = () => {
       <Row type="flex" justify="space-around" align="middle" gutter={16}>
         <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
           <Card
+            cover={<img src={konektCover} />}
             actions={[
               <Icon type="github" key="github" />,
               <Icon type="experiment" key="expiriment" />,
@@ -20,6 +23,7 @@ const projects = () => {
         </Col>
         <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
           <Card
+            cover={<img src={kube3dCover} />}
             style={{
               color: "white",
             }}

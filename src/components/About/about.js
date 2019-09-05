@@ -1,17 +1,7 @@
 import React, { Fragment } from "react"
 import { Row, Col, Typography } from "antd"
-import Lottie from "react-lottie"
-import animationData from "../../assets/about.json"
 
 const about = ({ src }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }
   const { Title, Paragraph } = Typography
   return (
     <Fragment>
@@ -24,7 +14,20 @@ const about = ({ src }) => {
         justify="center"
         gutter={32}
       >
-        <Col lg={8}></Col>
+        <Col lg={8}>
+          <img
+            style={{
+              borderRadius: "10px",
+              boxShadow: "-5px 5px 10px",
+              width: "auto",
+              height: "auto",
+              maxWidth: "100%",
+              maxHeight: "100%",
+            }}
+            alt="Graduation"
+            src={src}
+          />
+        </Col>
         <Col lg={8}>
           <Typography>
             <Title style={{ color: "white" }}>About Me</Title>
