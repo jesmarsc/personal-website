@@ -21,7 +21,7 @@ export default () => (
     </Affix>
     <About id="about" src={myImage} />
     <Projects id="projects" />
-    <Skills />
+    <Skills id="skills" />
     <BackTop />
     <Layout.Footer
       style={{

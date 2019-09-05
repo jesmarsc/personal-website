@@ -9,7 +9,7 @@ import {
   SvgSpring,
 } from "../Icons/iconExports"
 
-const skills = () => {
+const skills = ({ id }) => {
   const titleStyle = {
     color: "white",
     textAlign: "center",
@@ -24,8 +24,8 @@ const skills = () => {
     textAlign: "center",
   }
   return (
-    <div style={{ padding: "32px", backgroundColor: "#32a7cd" }}>
-      <Typography.Title style={titleStyle}>Technologies</Typography.Title>
+    <div id={id} style={{ paddingTop: "64px", backgroundColor: "#32a7cd" }}>
+      <Typography.Title style={titleStyle}>Skills</Typography.Title>
 
       <Row justify="space-around" type="flex">
         <Col style={colStyle} sm={24} lg={6}>
