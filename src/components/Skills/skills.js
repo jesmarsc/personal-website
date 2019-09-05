@@ -1,6 +1,6 @@
 import React from "react"
 import { Row, Col, Typography, Icon } from "antd"
-import SvgGatsby from "../icons/SvgGatsby"
+import SvgGatsby from "../Icons/SvgGatsby"
 
 const GatsbyIcon = props => <Icon component={SvgGatsby} {...props} />
 const skills = () => {
