@@ -1,13 +1,16 @@
 import React, { Fragment } from "react"
-import Banner from "../components/Banner/banner"
-import Projects from "../components/Projects/projects"
-import About from "../components/About/about"
-import Navbar from "../components/Navigation/navbar"
-import "antd/dist/antd.css"
-import { Affix, Typography, BackTop } from "antd"
+import { Affix, BackTop } from "antd"
+import {
+  Banner,
+  Navbar,
+  About,
+  Projects,
+  Skills,
+} from "../components/components"
 
 import myImage from "../assets/ucsb-me-solo-min.jpg"
 
+import "antd/dist/antd.css"
 document.body.style.backgroundColor = "#272262"
 
 export default () => (
@@ -16,12 +19,9 @@ export default () => (
     <Affix>
       <Navbar />
     </Affix>
-
     <About src={myImage} />
-    <Typography.Title style={{ textAlign: "center", color: "white" }}>
-      Projects
-    </Typography.Title>
     <Projects />
+    <Skills />
     <BackTop />
   </Fragment>
 )

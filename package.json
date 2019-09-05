@@ -16,8 +16,7 @@
     "antd": "^3.23.1",
     "gatsby": "^2.15.5",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-lottie": "^1.2.3"
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

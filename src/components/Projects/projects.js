@@ -1,15 +1,24 @@
 import React from "react"
-import { Card, Row, Col, Icon } from "antd"
+import { Card, Row, Col, Icon, Typography } from "antd"
 import konektCover from "../../assets/konekt-provider.png"
 import kube3dCover from "../../assets/kube3d-render.png"
 
 const projects = () => {
   return (
-    <div style={{ padding: "30px" }}>
+    <div
+      style={{
+        background:
+          "linear-gradient(0deg, rgba(50,167,205,1) 0%, rgba(45,112,161,1) 25%, rgba(42,78,134,1) 50%, rgba(39,34,98,1) 100%)",
+        padding: "30px",
+      }}
+    >
+      <Typography.Title style={{ textAlign: "center", color: "white" }}>
+        Projects
+      </Typography.Title>
       <Row type="flex" justify="space-around" align="middle" gutter={16}>
         <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
           <Card
-            cover={<img src={konektCover} />}
+            cover={<img alt="Kubernetes Konekt" src={konektCover} />}
             actions={[
               <Icon type="github" key="github" />,
               <Icon type="experiment" key="expiriment" />,
@@ -23,7 +32,7 @@ const projects = () => {
         </Col>
         <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
           <Card
-            cover={<img src={kube3dCover} />}
+            cover={<img alt="Kube3D" src={kube3dCover} />}
             style={{
               color: "white",
             }}
