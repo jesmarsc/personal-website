@@ -19,13 +19,12 @@ export default () => (
     <Affix>
       <Navbar />
     </Affix>
-    <About src={myImage} />
-    <Projects />
+    <About id="about" src={myImage} />
+    <Projects id="projects" />
     <Skills />
     <BackTop />
     <Layout.Footer
       style={{
-        height: "25vh",
         background:
           "linear-gradient(0deg, rgba(39,34,98,1) 0%, rgba(42,78,134,1) 25%, rgba(45,112,161,1) 50%, rgba(50,167,205,1) 100%)",
       }}

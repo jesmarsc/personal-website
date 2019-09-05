@@ -15,9 +15,10 @@ const skills = () => {
     textAlign: "center",
   }
   const iconStyle = {
-    margin: "12px",
+    margin: "4px",
     color: "black",
     fontSize: "3em",
+    fontFamily: "Ubuntu",
   }
   const colStyle = {
     textAlign: "center",

@@ -1,6 +1,7 @@
 import React from "react"
 import { Menu, Icon } from "antd"
 import "./navbar.css"
+import { Link } from "gatsby"
 
 const navbar = () => {
   return (
@@ -13,12 +14,16 @@ const navbar = () => {
       theme="dark"
     >
       <Menu.Item>
-        <Icon type="smile" />
-        About Me
+        <Link style={{ color: "white" }} to="/#about">
+          <Icon type="smile" />
+          About Me
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <Icon type="project" />
-        Projects
+        <Link style={{ color: "white" }} to="/#projects">
+          <Icon type="project" />
+          Projects
+        </Link>
       </Menu.Item>
     </Menu>
   )

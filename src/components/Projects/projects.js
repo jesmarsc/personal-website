@@ -1,22 +1,26 @@
 import React from "react"
 import { Card, Row, Col, Icon, Typography } from "antd"
-import konektCover from "../../assets/konekt-provider.png"
-import kube3dCover from "../../assets/kube3d-render.png"
+import konektCover from "../../assets/konekt-sized.png"
+import kubeCover from "../../assets/kube3d-sized.png"
 
-const projects = () => {
+const projects = ({ id }) => {
+  const colStyle = { margin: "10px 0px" }
   return (
     <div
+      id={id}
       style={{
         background:
           "linear-gradient(0deg, rgba(50,167,205,1) 0%, rgba(45,112,161,1) 25%, rgba(42,78,134,1) 50%, rgba(39,34,98,1) 100%)",
-        padding: "32px",
+        padding: "64px",
       }}
     >
-      <Typography.Title style={{ textAlign: "center", color: "white" }}>
+      <Typography.Title
+        style={{ fontFamily: "Ubuntu", textAlign: "center", color: "white" }}
+      >
         Projects
       </Typography.Title>
-      <Row type="flex" justify="space-around" align="middle" gutter={16}>
-        <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
+      <Row type="flex" justify="center" align="middle" gutter={16}>
+        <Col style={colStyle} xs={24} lg={6}>
           <Card
             cover={<img alt="Kubernetes Konekt" src={konektCover} />}
             actions={[
@@ -30,9 +34,9 @@ const projects = () => {
             />
           </Card>
         </Col>
-        <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
+        <Col style={colStyle} xs={24} lg={6}>
           <Card
-            cover={<img alt="Kube3D" src={kube3dCover} />}
+            cover={<img alt="Kube3D" src={kubeCover} />}
             style={{
               color: "white",
             }}
@@ -48,7 +52,7 @@ const projects = () => {
             />
           </Card>
         </Col>
-        <Col style={{ margin: "10px 0px" }} xs={24} lg={6}>
+        <Col style={colStyle} xs={24} lg={6}>
           <Card
             actions={[
               <Icon type="github" key="github" />,
