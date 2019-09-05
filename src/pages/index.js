@@ -8,7 +8,7 @@ import {
   Skills,
 } from "../components/components"
 
-import myImage from "../assets/ucsb-me-solo-min.jpg"
+import myImage from "../assets/grad-thumb.jpg"
 
 import "antd/dist/antd.css"
 document.body.style.backgroundColor = "#272262"

@@ -1,8 +1,8 @@
 import React from "react"
 import { Card, Row, Col, Icon, Typography } from "antd"
-import konektCover from "../../assets/konekt-sized.png"
-import kubeCover from "../../assets/kube3d-sized.png"
-import bannerCover from "../../assets/banner-sized.png"
+import konektCover from "../../assets/konekt-thumb.jpg"
+import kubeCover from "../../assets/kube3d-thumb.jpg"
+import bannerCover from "../../assets/banner-thumb.jpg"
 
 const projects = ({ id }) => {
   const colStyle = { margin: "10px 0px" }

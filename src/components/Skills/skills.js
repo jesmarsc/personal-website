@@ -13,6 +13,7 @@ const skills = ({ id }) => {
   const titleStyle = {
     color: "white",
     textAlign: "center",
+    fontFamily: "Ubuntu",
   }
   const iconStyle = {
     margin: "4px",
@@ -27,7 +28,7 @@ const skills = ({ id }) => {
     <div id={id} style={{ paddingTop: "64px", backgroundColor: "#32a7cd" }}>
       <Typography.Title style={titleStyle}>Skills</Typography.Title>
 
-      <Row justify="space-around" type="flex">
+      <Row justify="center" type="flex">
         <Col style={colStyle} sm={24} lg={6}>
           <Typography.Title style={titleStyle}>Front-End</Typography.Title>
           <IconText style={iconStyle} component={SvgReact}>
