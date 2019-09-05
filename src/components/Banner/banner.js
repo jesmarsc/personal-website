@@ -3,6 +3,7 @@ import { Row, Col, Button } from "antd"
 import ButtonGroup from "antd/lib/button/button-group"
 import style from "./banner.module.css"
 import resume from "../../assets/resume.pdf"
+import bannerCover from "../../assets/banner.jpg"
 
 const banner = () => {
   return (
@@ -12,7 +13,7 @@ const banner = () => {
       align="middle"
       style={{
         height: "100vh",
-        backgroundImage: "url(https://i.imgur.com/OpZLXyL.jpg)",
+        backgroundImage: `url(${bannerCover})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
