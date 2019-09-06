@@ -1,11 +1,23 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Card, Row, Col, Icon, Typography } from "antd"
+import {
+  IconText,
+  SvgGatsby,
+  SvgJava,
+  SvgMysql,
+  SvgReact,
+  SvgSpring,
+} from "../Icons/iconExports"
 import konektCover from "../../assets/konekt-thumb.jpg"
 import kubeCover from "../../assets/kube3d-thumb.jpg"
 import bannerCover from "../../assets/banner-thumb.jpg"
 
 const projects = ({ id }) => {
   const colStyle = { margin: "10px 0px" }
+  const iconStyle = {
+    paddingRight: "0.5em",
+    fontSize: "1.25em",
+  }
   return (
     <div
       id={id}
@@ -31,13 +43,30 @@ const projects = ({ id }) => {
           <Card
             cover={<img alt="Kubernetes Konekt" src={konektCover} />}
             actions={[
-              <Icon type="github" key="github" />,
-              <Icon type="experiment" key="expiriment" />,
+              <Fragment>
+                Code
+                <Icon type="github" key="github" />
+              </Fragment>,
+
+              <Fragment>
+                Demo
+                <Icon type="experiment" key="expiriment" />
+              </Fragment>,
+
+              <Fragment>
+                Built With
+                <div>
+                  <Icon style={iconStyle} component={SvgJava} />
+                  <Icon style={iconStyle} component={SvgSpring} />
+                  <Icon style={iconStyle} component={SvgMysql} />
+                </div>
+              </Fragment>,
             ]}
           >
             <Card.Meta
+              component={<p>hello</p>}
               title="Kubernetes Konekt"
-              description="A web application that deploys Docker containers to Kubernetes Clusters"
+              description="A web application that deploys containers to Kubernetes clusters."
             />
           </Card>
         </Col>
@@ -48,8 +77,22 @@ const projects = ({ id }) => {
               color: "white",
             }}
             actions={[
-              <Icon type="github" key="github" />,
-              <Icon type="experiment" key="expiriment" />,
+              <Fragment>
+                Code
+                <Icon type="github" key="github" />
+              </Fragment>,
+
+              <Fragment>
+                Demo
+                <Icon type="experiment" key="expiriment" />
+              </Fragment>,
+
+              <Fragment>
+                Built With
+                <div>
+                  <Icon style={iconStyle} component={SvgJava} />
+                </div>
+              </Fragment>,
             ]}
           >
             <Card.Meta
@@ -63,8 +106,23 @@ const projects = ({ id }) => {
           <Card
             cover={<img alt="Kube3D" src={bannerCover} />}
             actions={[
-              <Icon type="github" key="github" />,
-              <Icon type="experiment" key="expiriment" />,
+              <Fragment>
+                Code
+                <Icon type="github" key="github" />
+              </Fragment>,
+
+              <Fragment>
+                Demo
+                <Icon type="experiment" key="expiriment" />
+              </Fragment>,
+
+              <Fragment>
+                Built With
+                <div>
+                  <Icon style={iconStyle} component={SvgReact} />
+                  <Icon style={iconStyle} component={SvgGatsby} />
+                </div>
+              </Fragment>,
             ]}
           >
             <Card.Meta
