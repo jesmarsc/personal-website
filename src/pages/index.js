@@ -6,7 +6,7 @@ import {
   About,
   Projects,
   Skills,
-} from "../components/components"
+} from "../components/componentExports"
 import { Helmet } from "react-helmet"
 
 import myImage from "../assets/grad-thumb.jpg"
