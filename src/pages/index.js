@@ -12,7 +12,6 @@ import { Helmet } from "react-helmet"
 import myImage from "../assets/grad-thumb.jpg"
 
 import "antd/dist/antd.css"
-import { lang } from "moment"
 
 // Wrap the require in check for window
 if (typeof window !== `undefined`) {
