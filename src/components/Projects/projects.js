@@ -6,7 +6,7 @@ import {
   SvgMysql,
   SvgReact,
   SvgSpring,
-} from "../Icons/iconExports"
+} from "../Logos/iconExports"
 import konektCover from "../../assets/konekt-thumb.jpg"
 import kubeCover from "../../assets/kube3d-thumb.jpg"
 import bannerCover from "../../assets/banner-thumb.jpg"

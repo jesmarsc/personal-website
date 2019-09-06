@@ -7,7 +7,7 @@ import {
   SvgMysql,
   SvgReact,
   SvgSpring,
-} from "../Icons/iconExports"
+} from "../Logos/iconExports"
 
 const skills = ({ id }) => {
   const titleStyle = {
