@@ -1,0 +1,6 @@
+@import "~antd/dist/antd.css";
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-dark .ant-menu-item {
+  background-color: transparent; /*Overriden property*/
+}

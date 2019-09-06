@@ -43,7 +43,7 @@ export default () => (
         background: "#32a7cd",
       }}
     >
-      © 2019 Jesmar Castillo - Built with React, Gatsby, and Ant Design
+      © 2019 Jesmar Castillo - Built with React, Gatsby, and Ant Design.
     </Layout.Footer>
   </Fragment>
 )
