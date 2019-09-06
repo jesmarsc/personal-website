@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { Icon } from "antd"
 
 const IconText = ({ component, children, style }) => {

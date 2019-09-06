@@ -1,7 +1,6 @@
 import React, { Fragment } from "react"
 import { Card, Row, Col, Icon, Typography } from "antd"
 import {
-  IconText,
   SvgGatsby,
   SvgJava,
   SvgMysql,
@@ -64,12 +63,12 @@ const projects = ({ id }) => {
             ]}
           >
             <Card.Meta
-              component={<p>hello</p>}
               title="Kubernetes Konekt"
               description="A web application that deploys containers to Kubernetes clusters."
             />
           </Card>
         </Col>
+
         <Col style={colStyle} xs={24} lg={6}>
           <Card
             cover={<img alt="Kube3D" src={kubeCover} />}
@@ -96,12 +95,12 @@ const projects = ({ id }) => {
             ]}
           >
             <Card.Meta
-              style={{ color: "white" }}
               title="Kube3D"
               description="An Android application that 3D renders Kubernetes clusters"
             />
           </Card>
         </Col>
+
         <Col style={colStyle} xs={24} lg={6}>
           <Card
             cover={<img alt="Kube3D" src={bannerCover} />}

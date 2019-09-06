@@ -26,6 +26,7 @@ const banner = () => {
           <Button
             href="https://github.com/jesmarsc"
             target="_blank"
+            rel="noreferrer"
             size="large"
             ghost
             icon="github"
@@ -35,6 +36,7 @@ const banner = () => {
           <Button
             href="https://www.linkedin.com/in/jesmar-castillo-997336109/"
             target="_blank"
+            rel="noreferrer"
             size="large"
             ghost
             icon="linkedin"
@@ -44,6 +46,7 @@ const banner = () => {
           <Button
             href={resume}
             target="_blank"
+            rel="noreferrer"
             size="large"
             ghost
             icon="file-pdf"

@@ -7,14 +7,29 @@ import {
   Projects,
   Skills,
 } from "../components/components"
+import { Helmet } from "react-helmet"
 
 import myImage from "../assets/grad-thumb.jpg"
 
 import "antd/dist/antd.css"
-document.body.style.backgroundColor = "#272262"
+import { lang } from "moment"
+
+// Wrap the require in check for window
+if (typeof window !== `undefined`) {
+  document.body.style.backgroundColor = "#272262"
+}
 
 export default () => (
   <Fragment>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <meta
+        name="Description"
+        content="Jesmar Castillo personal website and portfolio"
+      />
+      <title>Jesmar Castillo</title>
+      <html lang="en" />
+    </Helmet>
     <Banner />
     <Affix>
       <Navbar />
@@ -25,11 +40,11 @@ export default () => (
     <BackTop />
     <Layout.Footer
       style={{
-        background:
-          "linear-gradient(0deg, rgba(39,34,98,1) 0%, rgba(42,78,134,1) 25%, rgba(45,112,161,1) 50%, rgba(50,167,205,1) 100%)",
+        textAlign: "center",
+        background: "#32a7cd",
       }}
     >
-      Greetings
+      © 2019 Jesmar Castillo - Built with React, Gatsby, and Ant Design
     </Layout.Footer>
   </Fragment>
 )
