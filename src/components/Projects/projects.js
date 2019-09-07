@@ -20,8 +20,8 @@ class Projects extends React.Component {
         cover: konektCover,
         description:
           "A web application that deploys containers to Kubernetes clusters.",
-        githubLink: "",
-        demoLink: "",
+        githubLink: "https://github.com/jesmarsc/kubernetes-konekt",
+        demoLink: "https://github.com/jesmarsc/kubernetes-konekt",
         builtWith: [SvgJava, SvgSpring, SvgMysql],
       },
       {
@@ -38,8 +38,8 @@ class Projects extends React.Component {
         cover: bannerCover,
         description:
           "My personal website you're viewing right now! Created to practice React.",
-        githubLink: "",
-        demoLink: "",
+        githubLink: "https://github.com/jesmarsc/personal-website",
+        demoLink: "https://github.com/jesmarsc/personal-website",
         builtWith: [SvgReact, SvgGatsby],
       },
     ],
