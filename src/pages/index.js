@@ -13,10 +13,7 @@ import myImage from "../assets/about.jpg"
 
 import "antd/dist/antd.css"
 
-// Wrap the require in check for window
-if (typeof window !== `undefined`) {
-  document.body.style.backgroundColor = "#272262"
-}
+require("typeface-ubuntu")
 
 export default () => (
   <Fragment>
@@ -28,6 +25,7 @@ export default () => (
       />
       <title>Jesmar Castillo</title>
       <html lang="en" />
+      <style>{"body { background-color: #272262; }"}</style>
     </Helmet>
     <Banner />
     <Affix>

@@ -14,8 +14,8 @@ const projectCard = ({
     margin: "0em 0.25em",
     fontSize: "1.4em",
   }
-  const builtWithIcons = builtWith.map(svg => (
-    <Icon style={iconStyle} component={svg} />
+  const builtWithIcons = builtWith.map((svg, index) => (
+    <Icon key={index} style={iconStyle} component={svg} />
   ))
   return (
     <Col style={colStyle} xs={24} lg={6}>

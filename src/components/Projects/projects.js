@@ -48,6 +48,7 @@ class Projects extends React.Component {
   render() {
     const projectCards = this.state.projects.map(project => (
       <ProjectCard
+        key={project.title}
         title={project.title}
         cover={project.cover}
         description={project.description}
