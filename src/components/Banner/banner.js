@@ -3,7 +3,7 @@ import { Row, Col, Button } from "antd"
 import ButtonGroup from "antd/lib/button/button-group"
 import style from "./banner.module.css"
 import resume from "../../assets/resume.pdf"
-import bannerCover from "../../assets/bannerImage.jpg"
+import bannerCover from "../../assets/banner.jpg"
 
 const banner = () => {
   return (

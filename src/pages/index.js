@@ -9,7 +9,7 @@ import {
 } from "../components/componentExports"
 import { Helmet } from "react-helmet"
 
-import myImage from "../assets/grad-thumb.jpg"
+import myImage from "../assets/about.jpg"
 
 import "antd/dist/antd.css"
 
