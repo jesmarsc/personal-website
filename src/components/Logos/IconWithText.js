@@ -1,12 +1,12 @@
-import React, { Fragment } from "react"
+import React from "react"
 
-const IconWithText = ({ component, style, children }) => {
+const IconWithText = ({ component, className, style, children }) => {
   const Component = component
   return (
-    <Fragment>
-      <Component style={{ ...style, verticalAlign: "middle" }} />
-      <span style={{ ...style, verticalAlign: "middle" }}>{children}</span>
-    </Fragment>
+    <div className={className} style={style}>
+      <Component style={{ verticalAlign: "middle" }} />
+      <span style={{ verticalAlign: "middle" }}>{children}</span>
+    </div>
   )
 }
 

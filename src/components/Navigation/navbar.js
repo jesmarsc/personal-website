@@ -1,37 +1,42 @@
 import React from "react"
-import { Menu, Icon } from "antd"
 import { Link } from "gatsby"
-import "./navbar.css"
+import { FaSmile, FaProjectDiagram, FaChartBar } from "react-icons/fa"
+import styles from "./navbar.module.css"
+import IconWithText from "../Logos/IconWithText"
 
 const navbar = () => {
   return (
-    <Menu
-      style={{
-        textAlign: "center",
-        backgroundColor: "#272262",
-      }}
-      mode="horizontal"
-      theme="dark"
-    >
-      <Menu.Item>
-        <Link style={{ color: "white" }} to="/#about">
-          <Icon type="smile" />
-          About Me
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link style={{ color: "white" }} to="/#projects">
-          <Icon type="project" />
-          Projects
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link style={{ color: "white" }} to="/#skills">
-          <Icon type="code" />
-          Skills
-        </Link>
-      </Menu.Item>
-    </Menu>
+    <nav className={styles.nav}>
+      <ul className={styles.menu}>
+        <li>
+          <Link to="/#about">
+            <IconWithText className={styles.menuLink} component={FaSmile}>
+              {" "}
+              About Me
+            </IconWithText>
+          </Link>
+        </li>
+        <li>
+          <Link to="/#projects">
+            <IconWithText
+              className={styles.menuLink}
+              component={FaProjectDiagram}
+            >
+              {" "}
+              Projects
+            </IconWithText>
+          </Link>
+        </li>
+        <li>
+          <Link to="/#skills">
+            <IconWithText className={styles.menuLink} component={FaChartBar}>
+              {" "}
+              Skills
+            </IconWithText>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
 
