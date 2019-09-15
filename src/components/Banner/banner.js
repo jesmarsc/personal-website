@@ -1,61 +1,51 @@
 import React from "react"
-import { Row, Col, Button } from "antd"
-import ButtonGroup from "antd/lib/button/button-group"
-import style from "./banner.module.css"
+
+import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa"
+import styles from "./banner.module.css"
 import resume from "../../assets/resume.pdf"
 import bannerCover from "../../assets/banner.svg"
+import IconWithText from "../Logos/IconWithText"
 
 const banner = () => {
   return (
-    <Row
-      type="flex"
-      justify="center"
-      align="middle"
+    <div
+      className={styles.row}
       style={{
-        height: "100vh",
         backgroundImage: `url(${bannerCover})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
       }}
     >
-      <Col style={{ textAlign: "center" }}>
-        <h1 className={style.banner}>
+      <div className={styles.column}>
+        <span className={styles.banner}>
           <strong>Jesmar.</strong>
-        </h1>
-        <ButtonGroup style={{}}>
-          <Button
+        </span>
+        <div>
+          <a
             href="https://github.com/jesmarsc"
             target="_blank"
             rel="noopener noreferrer"
-            size="large"
-            ghost
-            icon="github"
+            className={styles.button}
           >
-            Github
-          </Button>
-          <Button
-            href="https://www.linkedin.com/in/jesmar-castillo-997336109/"
+            <IconWithText component={FaGithub}> Github</IconWithText>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jesmar-castillo"
             target="_blank"
             rel="noopener noreferrer"
-            size="large"
-            ghost
-            icon="linkedin"
+            className={styles.button}
           >
-            Linkedin
-          </Button>
-          <Button
+            <IconWithText component={FaLinkedin}> Linkedin</IconWithText>
+          </a>
+          <a
             href={resume}
             target="_blank"
             rel="noopener noreferrer"
-            size="large"
-            ghost
-            icon="file-pdf"
+            className={styles.button}
           >
-            Resume
-          </Button>
-        </ButtonGroup>
-      </Col>
-    </Row>
+            <IconWithText component={FaFilePdf}> Resume</IconWithText>
+          </a>
+        </div>
+      </div>
+    </div>
   )
 }
 

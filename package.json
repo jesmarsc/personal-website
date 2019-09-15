@@ -13,14 +13,16 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
-    "antd": "^3.23.1",
-    "gatsby": "^2.15.5",
+    "antd": "^3.23.2",
+    "gatsby": "^2.15.9",
     "gatsby-plugin-manifest": "^2.2.14",
     "gatsby-plugin-offline": "^3.0.3",
     "gatsby-plugin-react-helmet": "^3.1.6",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
     "typeface-ubuntu": "0.0.65"
   },
   "devDependencies": {

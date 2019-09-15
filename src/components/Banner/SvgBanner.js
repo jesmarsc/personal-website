@@ -148,4 +148,3 @@ const SvgBanner = props => (
 )
 
 export default SvgBanner
-
