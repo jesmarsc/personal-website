@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { Affix, BackTop, Layout } from "antd"
+import { BackTop } from "antd"
 import {
   Banner,
   Navbar,
@@ -28,20 +28,20 @@ export default () => (
       <style>{"body { background-color: #272262; }"}</style>
     </Helmet>
     <Banner />
-    <Affix>
-      <Navbar />
-    </Affix>
+    <Navbar />
     <About id="about" src={myImage} />
     <Projects id="projects" />
     <Skills id="skills" />
     <BackTop />
-    <Layout.Footer
+    <span
       style={{
+        padding: "32px",
+        display: "block",
         textAlign: "center",
         background: "#32a7cd",
       }}
     >
-      © 2019 Jesmar Castillo - Built with React, Gatsby, and Ant Design.
-    </Layout.Footer>
+      © 2019 Jesmar Castillo - Built with React and Gatsby.
+    </span>
   </Fragment>
 )
