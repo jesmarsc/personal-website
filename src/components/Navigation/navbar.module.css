@@ -26,3 +26,9 @@
 .menuLink:hover {
   color: #dc4b95;
 }
+
+@media (max-width: 425px) {
+  .nav {
+    top: calc(100vh - 46px);
+  }
+}
