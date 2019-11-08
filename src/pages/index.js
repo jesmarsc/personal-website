@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
-import { BackTop } from 'antd';
 import { Banner, Navbar, Projects, Skills, AboutMe } from '../components';
 import { Helmet } from 'react-helmet';
 
-import 'antd/dist/antd.css';
+import '../styles/reset.scss';
 
 require('typeface-ubuntu');
 
@@ -24,7 +23,6 @@ export default () => (
     <AboutMe id="about" />
     <Projects id="projects" />
     <Skills id="skills" />
-    <BackTop />
     <footer
       style={{
         color: 'white',
