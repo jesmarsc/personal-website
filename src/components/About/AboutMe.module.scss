@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.container {
+  text-align: center;
+  .description {
+    font-family: 'Ubuntu';
+    font-size: 1.7rem;
+    margin: 8px;
+    color: white;
+    .decoration {
+      color: lighten(#dc4b95, 20);
+    }
+    .output {
+      color: #dc4b95;
+    }
+    .blinking {
+      color: lighten(#dc4b95, 20);
+      animation: blinkingText 1s step-start infinite;
+    }
+    @keyframes blinkingText {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+}

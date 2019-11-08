@@ -5,7 +5,7 @@
   justify-content: center;
   flex-shrink: 0;
   position: sticky;
-  top: 0;
+  top: calc(100vh - 46px);
   z-index: 1;
 }
 
@@ -17,6 +17,8 @@
 }
 
 .menuLink {
+  transition-duration: 0.25s;
+  transition-property: color;
   display: inline-block;
   padding: 12px;
   margin: 0 12px;
@@ -27,8 +29,8 @@
   color: #dc4b95;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) {
   .nav {
-    top: calc(100vh - 46px);
+    top: 0;
   }
 }

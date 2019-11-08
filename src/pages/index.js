@@ -1,19 +1,11 @@
-import React, { Fragment } from "react"
-import { BackTop } from "antd"
-import {
-  Banner,
-  Navbar,
-  About,
-  Projects,
-  Skills,
-} from "../components/componentExports"
-import { Helmet } from "react-helmet"
+import React, { Fragment } from 'react';
+import { BackTop } from 'antd';
+import { Banner, Navbar, Projects, Skills, AboutMe } from '../components';
+import { Helmet } from 'react-helmet';
 
-import myImage from "../assets/about.jpg"
+import 'antd/dist/antd.css';
 
-import "antd/dist/antd.css"
-
-require("typeface-ubuntu")
+require('typeface-ubuntu');
 
 export default () => (
   <Fragment>
@@ -25,23 +17,23 @@ export default () => (
       />
       <title>Jesmar Castillo</title>
       <html lang="en" />
-      <style>{"body { background-color: #272262; }"}</style>
+      <style>{'body { background-color: #272262; }'}</style>
     </Helmet>
     <Banner />
     <Navbar />
-    <About id="about" src={myImage} />
+    <AboutMe id="about" />
     <Projects id="projects" />
     <Skills id="skills" />
     <BackTop />
-    <span
+    <footer
       style={{
-        padding: "32px",
-        display: "block",
-        textAlign: "center",
-        background: "#32a7cd",
+        color: 'white',
+        margin: '32px',
+        display: 'block',
+        textAlign: 'center'
       }}
     >
       © 2019 Jesmar Castillo - Built with React and Gatsby.
-    </span>
+    </footer>
   </Fragment>
-)
+);
