@@ -2,7 +2,13 @@ $font-primary: 'Ubuntu', sans-serif;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 35%;
+  @media (min-width: 425px) {
+    font-size: 45%;
+  }
+  @media (min-width: 768px) {
+    font-size: 62.5%;
+  }
 }
 
 *,
