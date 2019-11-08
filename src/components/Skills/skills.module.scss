@@ -1,0 +1,33 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  @media (min-width: 425px) {
+    flex-direction: row;
+  }
+
+  .skill {
+    margin: 16px 0;
+    text-align: center;
+
+    h3 {
+      color: white;
+      font-family: 'Ubuntu';
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      @media (min-width: 425px) {
+        flex-direction: row;
+      }
+    }
+  }
+}

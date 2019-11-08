@@ -1,54 +1,54 @@
-import React from "react"
-import { Row, Typography } from "antd"
+import React from 'react';
 import {
   IconText,
   SvgGatsby,
   SvgJava,
   SvgMysql,
   SvgReact,
-  SvgSpring,
-} from "../Logos/iconExports"
+  SvgSpring
+} from '../Logos';
+
+import Section from '../section';
+import classes from './skills.module.scss';
 
 const skills = ({ id }) => {
-  const titleStyle = {
-    color: "white",
-    textAlign: "center",
-    fontFamily: "Ubuntu",
-    marginTop: "0.5em",
-    marginBottom: "0",
-  }
   const iconStyle = {
-    color: "black",
-    fontSize: "3em",
-    fontFamily: "Ubuntu",
-  }
+    color: 'white',
+    fontSize: '2rem',
+    fontFamily: 'Ubuntu'
+  };
   return (
-    <div id={id} style={{ paddingTop: "64px", backgroundColor: "#32a7cd" }}>
-      <Typography.Title style={titleStyle}>Skills</Typography.Title>
-      <Typography.Title style={titleStyle}>Front-End</Typography.Title>
-      <Row justify="center" type="flex">
-        <IconText style={iconStyle} component={SvgReact}>
-          React
-        </IconText>
-        <IconText style={iconStyle} component={SvgGatsby}>
-          Gatsby
-        </IconText>
-      </Row>
-      <Typography.Title style={titleStyle}>Back-End</Typography.Title>
+    <Section id={id} title="Skills">
+      <div className={classes.skills}>
+        <div className={classes.skill}>
+          <h3>Front-End</h3>
+          <div className={classes.column}>
+            <IconText style={iconStyle} component={SvgReact}>
+              React
+            </IconText>
+            <IconText style={iconStyle} component={SvgGatsby}>
+              Gatsby
+            </IconText>
+          </div>
+        </div>
 
-      <Row justify="center" type="flex">
-        <IconText style={iconStyle} component={SvgJava}>
-          Java
-        </IconText>
-        <IconText style={iconStyle} component={SvgSpring}>
-          Spring
-        </IconText>
-        <IconText style={iconStyle} component={SvgMysql}>
-          MySql
-        </IconText>
-      </Row>
-    </div>
-  )
-}
+        <div className={classes.skill}>
+          <h3>Back-End</h3>
+          <div className={classes.column}>
+            <IconText style={iconStyle} component={SvgJava}>
+              Java
+            </IconText>
+            <IconText style={iconStyle} component={SvgSpring}>
+              Spring
+            </IconText>
+            <IconText style={iconStyle} component={SvgMysql}>
+              MySQL
+            </IconText>
+          </div>
+        </div>
+      </div>
+    </Section>
+  );
+};
 
-export default skills
+export default skills;

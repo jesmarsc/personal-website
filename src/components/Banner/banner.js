@@ -1,17 +1,17 @@
-import React from "react"
+import React from 'react';
 
-import { FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa"
-import styles from "./banner.module.css"
-import resume from "../../assets/resume.pdf"
-import bannerCover from "../../assets/banner.svg"
-import IconWithText from "../Logos/IconWithText"
+import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
+import styles from './banner.module.css';
+import resume from '../../assets/resume.pdf';
+import bannerCover from '../../assets/banner.svg';
+import IconWithText from '../Logos/IconWithText';
 
 const banner = () => {
   return (
     <div
       className={styles.row}
       style={{
-        backgroundImage: `url(${bannerCover})`,
+        backgroundImage: `url(${bannerCover})`
       }}
     >
       <div className={styles.column}>
@@ -46,7 +46,7 @@ const banner = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default banner
+export default banner;
