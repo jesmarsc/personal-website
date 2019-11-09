@@ -5,7 +5,10 @@ import {
   SvgJava,
   SvgMysql,
   SvgReact,
-  SvgSpring
+  SvgSpring,
+  SvgJavascript,
+  SvgNode,
+  SvgFirebase
 } from '../Logos';
 
 import Section from '../section';
@@ -15,12 +18,23 @@ const skills = ({ id }) => {
   const iconStyle = {
     display: 'inline-block',
     color: 'white',
-    fontSize: '4rem',
+    fontSize: '3rem',
     margin: '0 16px'
   };
   return (
     <Section id={id} title="Skills">
       <div className={classes.skills}>
+        <div className={classes.skill}>
+          <h3>Languages</h3>
+          <div className={classes.icons}>
+            <IconWithText style={iconStyle} component={SvgJavascript}>
+              Javascript
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgJava}>
+              Java
+            </IconWithText>
+          </div>
+        </div>
         <div className={classes.skill}>
           <h3>Front-End</h3>
           <div className={classes.icons}>
@@ -36,9 +50,13 @@ const skills = ({ id }) => {
         <div className={classes.skill}>
           <h3>Back-End</h3>
           <div className={classes.icons}>
-            <IconWithText style={iconStyle} component={SvgJava}>
-              Java
+            <IconWithText style={iconStyle} component={SvgNode}>
+              Node.js
             </IconWithText>
+            <IconWithText style={iconStyle} component={SvgFirebase}>
+              Firebase
+            </IconWithText>
+
             <IconWithText style={iconStyle} component={SvgSpring}>
               Spring
             </IconWithText>
