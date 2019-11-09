@@ -28,7 +28,8 @@ export default () => (
         color: 'white',
         margin: '32px',
         display: 'block',
-        textAlign: 'center'
+        textAlign: 'center',
+        fontSize: '1.4rem'
       }}
     >
       © 2019 Jesmar Castillo - Built with React and Gatsby.

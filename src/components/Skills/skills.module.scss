@@ -1,33 +1,27 @@
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: column;
-
-  @media (min-width: 425px) {
-    flex-direction: row;
-  }
+  display: grid;
+  margin: 0 auto;
+  width: 80%;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  justify-content: center;
 
   .skill {
-    margin: 16px 0;
+    width: 100%;
+    display: grid;
     text-align: center;
+    grid-auto-rows: min-content;
 
     h3 {
       color: white;
-      font-family: 'Ubuntu';
-      font-size: 2rem;
+      font-size: 4rem;
       font-weight: bold;
-      margin: 0;
     }
-
-    .column {
+    .icons {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: row;
       justify-content: center;
-      flex-direction: column;
-      @media (min-width: 425px) {
-        flex-direction: row;
-      }
     }
   }
 }

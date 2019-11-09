@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const SvgGatsby = props => (
   <svg
@@ -7,9 +7,11 @@ const SvgGatsby = props => (
     y={0}
     viewBox="0 0 28 28"
     xmlSpace="preserve"
+    width="1em"
+    height="1em"
     {...props}
   >
-    <style>{".gatsby_svg__st1{fill:#fff}"}</style>
+    <style>{'.gatsby_svg__st1{fill:#fff}'}</style>
     <g id="gatsby_svg__monogram">
       <circle cx={14} cy={14} r={14} fill="#639" />
       <path
@@ -18,6 +20,6 @@ const SvgGatsby = props => (
       />
     </g>
   </svg>
-)
+);
 
-export default SvgGatsby
+export default SvgGatsby;

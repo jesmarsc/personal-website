@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  IconText,
+  IconWithText,
   SvgGatsby,
   SvgJava,
   SvgMysql,
@@ -13,37 +13,38 @@ import classes from './skills.module.scss';
 
 const skills = ({ id }) => {
   const iconStyle = {
+    display: 'inline-block',
     color: 'white',
-    fontSize: '2rem',
-    fontFamily: 'Ubuntu'
+    fontSize: '4rem',
+    margin: '0 16px'
   };
   return (
     <Section id={id} title="Skills">
       <div className={classes.skills}>
         <div className={classes.skill}>
           <h3>Front-End</h3>
-          <div className={classes.column}>
-            <IconText style={iconStyle} component={SvgReact}>
+          <div className={classes.icons}>
+            <IconWithText style={iconStyle} component={SvgReact}>
               React
-            </IconText>
-            <IconText style={iconStyle} component={SvgGatsby}>
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgGatsby}>
               Gatsby
-            </IconText>
+            </IconWithText>
           </div>
         </div>
 
         <div className={classes.skill}>
           <h3>Back-End</h3>
-          <div className={classes.column}>
-            <IconText style={iconStyle} component={SvgJava}>
+          <div className={classes.icons}>
+            <IconWithText style={iconStyle} component={SvgJava}>
               Java
-            </IconText>
-            <IconText style={iconStyle} component={SvgSpring}>
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgSpring}>
               Spring
-            </IconText>
-            <IconText style={iconStyle} component={SvgMysql}>
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgMysql}>
               MySQL
-            </IconText>
+            </IconWithText>
           </div>
         </div>
       </div>
