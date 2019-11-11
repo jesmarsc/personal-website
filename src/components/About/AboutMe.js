@@ -75,7 +75,12 @@ class AboutMe extends Component {
             <span className={styles.blinking}>|</span>
           </p>
           <p className={styles.description}>
-            I'm currently studying
+            I have a<span className={styles.output}> Bachelor of Science </span>
+            in
+            <span className={styles.output}> Computer Engineering</span>
+          </p>
+          <p className={styles.description}>
+            and I'm currently studying
             <span className={styles.output}> web development </span>
             and
             <span className={styles.output}> cloud technologies</span>!
