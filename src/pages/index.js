@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { Banner, Navbar, Projects, Skills, AboutMe } from '../components';
-import Modal from 'react-modal';
 import { Helmet } from 'react-helmet';
 
 import '../styles/reset.scss';

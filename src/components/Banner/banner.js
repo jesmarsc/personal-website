@@ -49,6 +49,8 @@ const banner = () => {
           </li>
         </ul>
       </nav>
+
+      <span className={styles.scroll} />
     </div>
   );
 };
