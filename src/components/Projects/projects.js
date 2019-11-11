@@ -106,6 +106,10 @@ class Projects extends React.Component {
     ]
   };
 
+  componentDidMount() {
+    Modal.setAppElement(document.getElementById('___gatsby'));
+  }
+
   openModal = index => {
     this.setState({ modalIsOpen: true, selectedProject: index });
   };

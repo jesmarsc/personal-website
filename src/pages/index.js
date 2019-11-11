@@ -7,8 +7,6 @@ import '../styles/reset.scss';
 
 require('typeface-ubuntu');
 
-Modal.setAppElement(document.getElementById('___gatsby'));
-
 export default () => (
   <Fragment>
     <Helmet>
