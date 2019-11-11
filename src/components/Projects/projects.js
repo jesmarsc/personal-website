@@ -7,6 +7,7 @@ import kubeCover from '../../assets/kube3d-thumb.jpg';
 import bannerCover from '../../assets/banner-thumb.jpg';
 
 import styles from './projects.module.scss';
+import './projects.css';
 
 const customStyle = {
   overlay: {
@@ -21,18 +22,18 @@ const kubekoDescription = (
       <h2 className={styles.version}>v1</h2>
       <p className={styles.description}>
         A web application built to help people start using Kubernetes without
-        having to worry about setting up clusters! Other users who already have
-        clusters running can share them with us, allowing people to deploy
-        resources onto their cluster.
+        having to worry about setting up clusters. Other users who have setup
+        clusters can share them with us, allowing people to deploy resources
+        onto them.
       </p>
     </div>
     <div className={styles.divider} />
     <div className={styles.part}>
       <h2 className={styles.version}>v2</h2>
       <p className={styles.description}>
-        A complete rewrite from scratch! But now using a React with a Node.js
-        backend! Major changes to the way users are authenticated with a cluster
-        by now using JSON web tokens and OpenID Connect.
+        A complete rewrite from scratch, but built with React and Node.js. Major
+        changes to the way users are authenticated with a cluster were made by
+        using JSON web tokens and OpenID Connect.
       </p>
     </div>
   </Fragment>
@@ -43,9 +44,9 @@ const kube3dDescription = (
     <div className={styles.part}>
       <h2 className={styles.version}>v1</h2>
       <p className={styles.description}>
-        A mobile application that helps people visualize their cluster and at a
-        glance be able to examine what is happening. This is also a helpful tool
-        for new users of Kubernetes to visually how a Kubernetes cluster works.
+        An Android application that helps people visualize their cluster and be
+        able to examine what is happening. This also serves as a helpful tool
+        for new Kubernetes users to visually understand how a cluster works.
       </p>
     </div>
     <div className={styles.divider} />
@@ -65,9 +66,9 @@ const portfolioDescription = (
     <div className={styles.part}>
       <h2 className={styles.version}>v1</h2>
       <p className={styles.description}>
-        The website you're on right now! Started when I was learning React as a
-        way to get practice and display the projects I've worked on. All of it
-        has been built with custom CSS as well!
+        The website you're viewing right now! It started as a way to learn React
+        and display the projects I've worked on. Everything you see here has
+        been built with custom React components and CSS.
       </p>
     </div>
   </Fragment>
@@ -84,7 +85,7 @@ class Projects extends React.Component {
         tools: ['React', 'Firebase', 'Node.js', 'Express', 'Spring', 'MySQL'],
         description: kubekoDescription,
         githubLink: 'https://github.com/jesmarsc/kubernetes-konekt',
-        demoLink: 'https://github.com/jesmarsc/kubernetes-konekt'
+        demoLink: ''
       },
       {
         title: 'Kubernetes 3D Modeling',
@@ -100,7 +101,7 @@ class Projects extends React.Component {
         tools: ['React', 'Gatsby', 'SASS'],
         description: portfolioDescription,
         githubLink: 'https://github.com/jesmarsc/personal-website',
-        demoLink: 'https://github.com/jesmarsc/personal-website'
+        demoLink: ''
       }
     ]
   };
@@ -115,19 +116,32 @@ class Projects extends React.Component {
 
   render() {
     const { modalIsOpen, selectedProject, projects } = this.state;
-    const { title, cover, tools, description } = projects[selectedProject];
+    const { title, cover, tools, description, githubLink, demoLink } = projects[
+      selectedProject
+    ];
     const { id } = this.props;
 
     const card = (
-      <ProjectCard tools={tools} title={title} image={cover}>
+      <ProjectCard
+        tools={tools}
+        title={title}
+        image={cover}
+        github={githubLink}
+        demo={demoLink}
+      >
         {description}
       </ProjectCard>
     );
     return (
       <Section id={id} title={'Projects'}>
         <Modal
-          className={{ base: styles.base }}
+          className={{
+            base: styles.base,
+            afterOpen: styles.afterOpen,
+            beforeClose: styles.beforeClose
+          }}
           style={customStyle}
+          closeTimeoutMS={100}
           isOpen={modalIsOpen}
           onRequestClose={this.closeModal}
         >
