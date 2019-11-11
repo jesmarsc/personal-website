@@ -46,7 +46,6 @@ const skills = ({ id }) => {
             </IconWithText>
           </div>
         </div>
-
         <div className={classes.skill}>
           <h3>Back-End</h3>
           <div className={classes.icons}>

@@ -5,7 +5,7 @@
   justify-content: center;
   flex-shrink: 0;
   position: sticky;
-  top: calc(100vh - (32px + 2rem));
+  top: calc(100vh - (33px + 2rem));
   z-index: 1;
 
   .menu {
@@ -20,13 +20,12 @@
       padding: 16px;
       margin: 0 16px;
       color: white;
+      &:hover {
+        color: #dc4b95;
+      }
       @media (min-width: 425px) {
         font-size: 1.5rem;
       }
-    }
-
-    .menuLink:hover {
-      color: #dc4b95;
     }
   }
 

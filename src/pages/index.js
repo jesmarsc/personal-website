@@ -1,10 +1,13 @@
 import React, { Fragment } from 'react';
 import { Banner, Navbar, Projects, Skills, AboutMe } from '../components';
+import Modal from 'react-modal';
 import { Helmet } from 'react-helmet';
 
 import '../styles/reset.scss';
 
 require('typeface-ubuntu');
+
+Modal.setAppElement(document.getElementById('___gatsby'));
 
 export default () => (
   <Fragment>
@@ -26,7 +29,7 @@ export default () => (
     <footer
       style={{
         color: 'white',
-        margin: '32px',
+        padding: '32px',
         display: 'block',
         textAlign: 'center',
         fontSize: '1.4rem'
