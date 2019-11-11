@@ -20,7 +20,7 @@ const kubekoDescription = (
   <Fragment>
     <div className={styles.part}>
       <h2 className={styles.version}>v1</h2>
-      <p className={styles.description}>
+      <p>
         A web application built to help people start using Kubernetes without
         having to worry about setting up clusters. Other users who have setup
         clusters can share them with us, allowing people to deploy resources
@@ -30,7 +30,7 @@ const kubekoDescription = (
     <div className={styles.divider} />
     <div className={styles.part}>
       <h2 className={styles.version}>v2</h2>
-      <p className={styles.description}>
+      <p>
         A complete rewrite from scratch, but built with React and Node.js. Major
         changes to the way users are authenticated with a cluster were made by
         using JSON web tokens and OpenID Connect.
@@ -43,7 +43,7 @@ const kube3dDescription = (
   <Fragment>
     <div className={styles.part}>
       <h2 className={styles.version}>v1</h2>
-      <p className={styles.description}>
+      <p>
         An Android application that helps people visualize their cluster and be
         able to examine what is happening. This also serves as a helpful tool
         for new Kubernetes users to visually understand how a cluster works.
@@ -52,11 +52,11 @@ const kube3dDescription = (
     <div className={styles.divider} />
     <div className={styles.part}>
       <h2 className={styles.version}>v2</h2>
-      <span className={styles.description}>
+      <p>
         Another complete rewrite from scratch! The idea was to expand the
         platforms this worked on by bringing it to the web with React and
         Babylon.js
-      </span>
+      </p>
     </div>
   </Fragment>
 );
@@ -65,7 +65,7 @@ const portfolioDescription = (
   <Fragment>
     <div className={styles.part}>
       <h2 className={styles.version}>v1</h2>
-      <p className={styles.description}>
+      <p>
         The website you're viewing right now! It started as a way to learn React
         and display the projects I've worked on. Everything you see here has
         been built with custom React components and CSS.

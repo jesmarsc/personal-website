@@ -61,17 +61,12 @@
   gap: 16px;
   grid-template-columns: max-content 1fr;
 }
+
 .version {
-  display: block;
   color: white;
   margin: 8px;
   margin-bottom: 0;
   font-size: 2rem;
-}
-
-.description {
-  display: block;
-  font-size: 1.4rem;
 }
 
 .divider {

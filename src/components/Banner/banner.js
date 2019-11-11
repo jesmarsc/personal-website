@@ -15,32 +15,40 @@ const banner = () => {
       }}
     >
       <header className={styles.header}>Jesmar.</header>
-      <div>
-        <a
-          href="https://github.com/jesmarsc"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          <IconWithText component={FaGithub}> Github</IconWithText>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/jesmar-castillo"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          <IconWithText component={FaLinkedin}> Linkedin</IconWithText>
-        </a>
-        <a
-          href={resume}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          <IconWithText component={FaFilePdf}> Resume</IconWithText>
-        </a>
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/jesmarsc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              <IconWithText component={FaGithub}> Github</IconWithText>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jesmar-castillo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              <IconWithText component={FaLinkedin}> Linkedin</IconWithText>
+            </a>
+          </li>
+          <li>
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              <IconWithText component={FaFilePdf}> Resume</IconWithText>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .container {
   height: 100vh;
   display: flex;
@@ -8,23 +10,39 @@
   background-position: center;
 
   .header {
-    font-size: 15rem;
+    font-size: 26vw;
     font-weight: bold;
     line-height: 1;
     color: white;
   }
 
-  .button {
-    display: inline-block;
-    font-size: 2rem;
-    padding: 0 16px;
-    color: white;
-    transition: color 0.25s;
-    &:hover {
-      color: #272262;
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        .button {
+          display: inline-block;
+          font-size: 2.2rem;
+          padding: 0 16px;
+          color: white;
+          transition: color $transition-duration;
+          &:hover {
+            color: $primary-color;
+          }
+          @media (min-width: 600px) {
+            font-size: 1.6rem;
+          }
+        }
+      }
     }
-    @media (min-width: 425px) {
-      font-size: 1.5rem;
+  }
+
+  @media (min-width: 425px) {
+    .header {
+      font-size: 14rem;
     }
   }
 }

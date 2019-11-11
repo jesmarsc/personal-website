@@ -4,17 +4,17 @@
   text-align: center;
   .description {
     font-family: 'Ubuntu';
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 8px;
     color: white;
     .decoration {
-      color: lighten(#dc4b95, 20);
+      color: lighten($highlight-color, 20);
     }
     .output {
-      color: #dc4b95;
+      color: $highlight-color;
     }
     .blinking {
-      color: lighten(#dc4b95, 20);
+      color: lighten($highlight-color, 20);
       animation: blinkingText 1s step-start infinite;
     }
     @keyframes blinkingText {
