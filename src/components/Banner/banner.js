@@ -2,7 +2,6 @@ import React from 'react';
 
 import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import styles from './banner.module.scss';
-import resume from '../../assets/resume.pdf';
 import bannerCover from '../../assets/banner.svg';
 import { IconWithText } from '../Logos';
 
@@ -39,7 +38,7 @@ const banner = () => {
           </li>
           <li>
             <a
-              href={resume}
+              href={'./resume.pdf'}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.button}
