@@ -88,12 +88,12 @@ class Projects extends React.Component {
         demoLink: ''
       },
       {
-        title: 'Kubernetes 3D Modeling',
+        title: 'Kubernetes 3D Renderer',
         cover: kubeCover,
         tools: ['React', 'Babylon.js', 'Android', 'Unity'],
         description: kube3dDescription,
-        githubLink: '',
-        demoLink: ''
+        githubLink: 'https://github.com/jesmarsc/kube3d',
+        demoLink: 'https://kube3d.netlify.com/'
       },
       {
         title: 'Portfolio',
@@ -101,7 +101,7 @@ class Projects extends React.Component {
         tools: ['React', 'Gatsby', 'SASS'],
         description: portfolioDescription,
         githubLink: 'https://github.com/jesmarsc/personal-website',
-        demoLink: ''
+        demoLink: 'https://jesmar.info/'
       }
     ]
   };
@@ -157,8 +157,8 @@ class Projects extends React.Component {
             <h3>Kubernetes Cluster Sharing</h3>
           </button>
           <button onClick={() => this.openModal(1)} className={styles.item}>
-            <img src={kubeCover} alt="Kubernetes 3D Modeling screenshot" />
-            <h3>Kubernetes 3D Modeling</h3>
+            <img src={kubeCover} alt="Kubernetes 3D Renderer screenshot" />
+            <h3>Kubernetes 3D Renderer</h3>
           </button>
           <button onClick={() => this.openModal(2)} className={styles.item}>
             <img src={bannerCover} alt="Portfolio screenshot" />
