@@ -1,11 +1,9 @@
 import React from 'react';
-import { IconWithText } from '../Logos';
+import { IconWithText } from '@components/Logos';
 import { FaCode, FaPlayCircle } from 'react-icons/fa';
 import styles from './projectCard.module.scss';
 
-// props: title, technology
-// children: description
-const projectCard = ({ title, tools, image, children, github, demo }) => {
+const projectCard = ({ image, title, tools, github, demo, children }) => {
   const toolItems = tools.map(tool => {
     return (
       <li key={tool} className={styles.tool}>
@@ -30,7 +28,7 @@ const projectCard = ({ title, tools, image, children, github, demo }) => {
         <div className={styles.about}>{children}</div>
         <nav className={styles.links}>
           <ul>
-            <li>
+            <li key={github} className={styles.link}>
               <a
                 href={github}
                 target="_blank"
@@ -40,7 +38,7 @@ const projectCard = ({ title, tools, image, children, github, demo }) => {
                 <IconWithText component={FaCode}> Code</IconWithText>
               </a>
             </li>
-            <li>
+            <li key={demo} className={styles.link}>
               <a
                 href={demo}
                 target="_blank"

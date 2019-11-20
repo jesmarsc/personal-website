@@ -38,7 +38,7 @@ const banner = () => {
           </li>
           <li>
             <a
-              href={'./resume.pdf'}
+              href={'./jesmar-resume.pdf'}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.button}

@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+const path = require('path');
 
 module.exports = {
   /* Your site config here */
@@ -30,6 +31,17 @@ module.exports = {
         production: true
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@assets': path.resolve(__dirname, 'src/assets'),
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@styles': path.resolve(__dirname, 'src/styles')
+        },
+        extensions: []
+      }
+    }
   ]
 };
