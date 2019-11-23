@@ -3,9 +3,9 @@ import Modal from 'react-modal';
 
 import { Kube3dCard, KubekoCard, PortfolioCard } from './Cards';
 import Section from '@components/section';
-import konektCover from '@assets/konekt-thumb.jpg';
+import konektCover from '@assets/kubeko-thumb.jpg';
 import kubeCover from '@assets/kube3d-thumb.jpg';
-import bannerCover from '@assets/banner-thumb.jpg';
+import bannerCover from '@assets/portfolio-thumb.jpg';
 
 import styles from './projects.module.scss';
 import './projects.css';

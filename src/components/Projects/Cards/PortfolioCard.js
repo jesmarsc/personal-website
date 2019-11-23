@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../projectCard';
-import bannerCover from '@assets/banner-thumb.jpg';
+import bannerCover from '@assets/portfolio-thumb.jpg';
 
 import styles from './Description.module.scss';
 

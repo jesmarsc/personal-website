@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import styles from './banner.module.scss';
-import bannerCover from '../../assets/banner.svg';
+import bannerCover from '@assets/banner.svg';
 import { IconWithText } from '../Logos';
 
 const banner = () => {

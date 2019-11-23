@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../projectCard';
-import konektCover from '@assets/konekt-thumb.jpg';
+import konektCover from '@assets/kubeko-thumb.jpg';
 
 import styles from './Description.module.scss';
 
