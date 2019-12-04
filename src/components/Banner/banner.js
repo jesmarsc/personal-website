@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FaGithub, FaFilePdf } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import styles from './banner.module.scss';
 import bannerCover from '@assets/banner.svg';
 import { IconWithText } from '../Logos';
@@ -24,6 +24,16 @@ const banner = () => {
               className={styles.button}
             >
               <IconWithText component={FaGithub}> Github</IconWithText>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jesmar-castillo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.button}
+            >
+              <IconWithText component={FaLinkedin}> Linkedin</IconWithText>
             </a>
           </li>
           <li>
