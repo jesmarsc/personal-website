@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { FaSmile, FaProjectDiagram, FaChartBar } from 'react-icons/fa';
 import styles from './navbar.module.scss';
-import { IconWithText } from '../Logos';
+import { IconWithText } from '@components';
 
 const navbar = () => {
   return (

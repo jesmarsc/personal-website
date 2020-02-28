@@ -4,6 +4,16 @@ import About from './About/about';
 import AboutMe from './About/AboutMe';
 import Navbar from './Navigation/navbar';
 import Skills from './Skills/skills';
-import Contact from './Contact/contact';
+import SidePanel from './SidePanel/SidePanel';
+import IconWithText from './Logos';
 
-export { Banner, Projects, About, Navbar, Skills, Contact, AboutMe };
+export {
+  Banner,
+  Projects,
+  About,
+  Navbar,
+  Skills,
+  AboutMe,
+  SidePanel,
+  IconWithText
+};

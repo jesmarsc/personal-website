@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconWithText } from '@components/Logos';
+import { IconWithText } from '@components';
 import { FaCode, FaPlayCircle } from 'react-icons/fa';
 import styles from './projectCard.module.scss';
 

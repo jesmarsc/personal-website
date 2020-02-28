@@ -8,7 +8,9 @@ import SvgNode from './SvgNode';
 import SvgFirebase from './SvgFirebase';
 import IconWithText from './IconWithText';
 
+export default IconWithText;
 export {
+  IconWithText,
   SvgGatsby,
   SvgJava,
   SvgMysql,
@@ -16,6 +18,5 @@ export {
   SvgSpring,
   SvgJavascript,
   SvgNode,
-  SvgFirebase,
-  IconWithText
+  SvgFirebase
 };

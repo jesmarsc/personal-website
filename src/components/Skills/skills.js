@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  IconWithText,
   SvgGatsby,
   SvgJava,
   SvgMysql,
@@ -9,7 +8,8 @@ import {
   SvgJavascript,
   SvgNode,
   SvgFirebase
-} from '../Logos';
+} from '@components/Logos';
+import { IconWithText } from '@components';
 
 import Section from '../section';
 import classes from './skills.module.scss';
