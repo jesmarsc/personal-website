@@ -8,6 +8,7 @@ import SidePanel from './SidePanel/SidePanel';
 import IconWithText from './Logos';
 import Layout from './Layout/Layout';
 import SEO from './SEO/SEO';
+import ProjectsGrid from './Projects/projectsGrid';
 
 export {
   Banner,
@@ -19,5 +20,6 @@ export {
   SidePanel,
   IconWithText,
   Layout,
-  SEO
+  SEO,
+  ProjectsGrid
 };

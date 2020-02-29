@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-import { Layout } from '@components';
+import { Layout, SEO, ProjectsGrid } from '@components';
 
 const projects = () => {
-  return <Layout></Layout>;
+  return (
+    <Fragment>
+      <SEO title={'Projects'} path={'/projects'} />
+      <Layout>
+        <ProjectsGrid />
+      </Layout>
+    </Fragment>
+  );
 };
 
 export default projects;
