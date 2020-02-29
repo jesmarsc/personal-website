@@ -1,5 +1,5 @@
 ---
-path: '/project/kubeko-v1'
+path: '/projects/kubeko-v1'
 title: 'Kubeko v1'
 featuredImage: '../assets/kubeko-v1.jpg'
 technologies: [Java, Spring, Hibernate, MySQL, Kubernetes]

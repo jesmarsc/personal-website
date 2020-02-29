@@ -6,6 +6,8 @@ import Navbar from './Navigation/navbar';
 import Skills from './Skills/skills';
 import SidePanel from './SidePanel/SidePanel';
 import IconWithText from './Logos';
+import Layout from './Layout/Layout';
+import SEO from './SEO/SEO';
 
 export {
   Banner,
@@ -15,5 +17,7 @@ export {
   Skills,
   AboutMe,
   SidePanel,
-  IconWithText
+  IconWithText,
+  Layout,
+  SEO
 };

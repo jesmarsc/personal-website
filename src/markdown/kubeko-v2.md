@@ -1,5 +1,5 @@
 ---
-path: '/project/kubeko-v2'
+path: '/projects/kubeko-v2'
 title: 'Kubeko v2'
 featuredImage: '../assets/kubeko-thumb.jpg'
 technologies: [React, Node.js, Express, Firebase, Kubernetes]
