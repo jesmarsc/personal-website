@@ -30,7 +30,7 @@ const ProjectsGrid = () => {
     <div className={classes.grid}>
       {nodes.map(({ frontmatter: { path, title, featuredImage } }) => {
         return (
-          <Link to={path} className={classes.item}>
+          <Link key={title} to={path} className={classes.item}>
             <Img
               fluid={featuredImage.childImageSharp.fluid}
               style={{ minHeight: '100%' }}

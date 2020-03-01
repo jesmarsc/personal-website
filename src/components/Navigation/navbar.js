@@ -1,38 +1,41 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FaSmile, FaProjectDiagram, FaChartBar } from 'react-icons/fa';
-import styles from './navbar.module.scss';
-import { IconWithText } from '@components';
+import { FaHome, FaUserCircle, FaCode } from 'react-icons/fa';
+
+import classes from './navbar.module.scss';
 
 const navbar = () => {
   return (
-    <nav className={styles.nav}>
-      <ul className={styles.menu}>
+    <nav className={classes.nav}>
+      <ul className={classes.menu}>
         <li>
-          <Link to="/#about">
-            <IconWithText className={styles.menuLink} component={FaSmile}>
-              {' '}
-              About Me
-            </IconWithText>
+          <Link
+            to="/"
+            className={classes.menu__link}
+            activeClassName={classes.active}
+          >
+            <FaHome className={classes.menu__linkIcon} />
+            <p className={classes.menu__linkText}>Home</p>
           </Link>
         </li>
         <li>
-          <Link to="/#projects">
-            <IconWithText
-              className={styles.menuLink}
-              component={FaProjectDiagram}
-            >
-              {' '}
-              Projects
-            </IconWithText>
+          <Link
+            to="/"
+            className={classes.menu__link}
+            activeClassName={classes.active}
+          >
+            <FaUserCircle className={classes.menu__linkIcon} />
+            <p className={classes.menu__linkText}>About Me</p>
           </Link>
         </li>
         <li>
-          <Link to="/#skills">
-            <IconWithText className={styles.menuLink} component={FaChartBar}>
-              {' '}
-              Skills
-            </IconWithText>
+          <Link
+            to="/projects"
+            className={classes.menu__link}
+            activeClassName={classes.active}
+          >
+            <FaCode className={classes.menu__linkIcon} />
+            <p className={classes.menu__linkText}>Projects</p>
           </Link>
         </li>
       </ul>

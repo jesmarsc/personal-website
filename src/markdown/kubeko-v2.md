@@ -20,7 +20,7 @@ The front-end is composed entirely of **React** and uses other libraries such as
 - **Ant Design (UI Framework)**: Used for out of the box table components.
 - **Formik (Form Handler)**: Creates form components.
 
-Like the capstone, the user can upload a YAML file representing the resource they want to create on their desired Kubernetes cluster. This request is then sent to the Node.js back-end that forwards
+Like the capstone, the user can upload a YAML file representing the resource they want to create on their desired Kubernetes cluster. This request is then sent to the Node.js back-end that forwards it to the Kubernetes cluster.
 
 ###Back-end
 The back-end consists of Firebase and a Node.js proxy server.

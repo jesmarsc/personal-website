@@ -1,0 +1,44 @@
+@import '@styles/variables.scss';
+
+.button {
+  position: fixed;
+  top: 32px;
+  right: 32px;
+  border-radius: 50px;
+  width: 64px;
+  height: 64px;
+  z-index: 5;
+  font-size: 4rem;
+  background-color: $highlight-color;
+  opacity: 0.9;
+
+  &:hover {
+    content: 'X';
+    cursor: pointer;
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  background-color: $primary-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  font-size: 4rem;
+  color: white;
+}
+
+.activeLink {
+  color: $highlight-color;
+}

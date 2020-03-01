@@ -9,6 +9,7 @@ import IconWithText from './Logos';
 import Layout from './Layout/Layout';
 import SEO from './SEO/SEO';
 import ProjectsGrid from './Projects/projectsGrid';
+import Navmenu from './Navigation/navmenu';
 
 export {
   Banner,
@@ -21,5 +22,6 @@ export {
   IconWithText,
   Layout,
   SEO,
-  ProjectsGrid
+  ProjectsGrid,
+  Navmenu
 };
