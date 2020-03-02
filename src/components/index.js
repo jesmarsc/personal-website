@@ -10,6 +10,7 @@ import Layout from './Layout/Layout';
 import SEO from './SEO/SEO';
 import ProjectsGrid from './Projects/projectsGrid';
 import Navmenu from './Navigation/navmenu';
+import Section from './section';
 
 export {
   Banner,
@@ -23,5 +24,6 @@ export {
   Layout,
   SEO,
   ProjectsGrid,
-  Navmenu
+  Navmenu,
+  Section
 };

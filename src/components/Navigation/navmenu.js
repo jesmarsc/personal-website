@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
 import classes from './navmenu.module.scss';
@@ -18,7 +18,7 @@ export const Navmenu = ({ className }) => {
         </li>
         <li>
           <Link
-            to="/"
+            to="/about"
             className={classes.link}
             activeClassName={classes.activeLink}
           >

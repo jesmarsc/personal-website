@@ -7,7 +7,11 @@ const projects = () => {
     <Fragment>
       <SEO title={'Projects'} path={'/projects'} />
       <Layout>
-        <h1 style={{ margin: '16px 0px', textAlign: 'center' }}>Projects</h1>
+        <h1
+          style={{ margin: '16px 0px', textAlign: 'center', fontSize: '4rem' }}
+        >
+          Projects
+        </h1>
         <ProjectsGrid />
       </Layout>
     </Fragment>

@@ -7,7 +7,9 @@ import {
   SvgSpring,
   SvgJavascript,
   SvgNode,
-  SvgFirebase
+  SvgFirebase,
+  SvgMobx,
+  SvgKubernetes
 } from '@components/Logos';
 import { IconWithText } from '@components';
 
@@ -18,7 +20,7 @@ const skills = ({ id }) => {
   const iconStyle = {
     display: 'inline-block',
     color: 'white',
-    fontSize: '3rem',
+    fontSize: '2.2rem',
     margin: '0 16px'
   };
   return (
@@ -28,7 +30,7 @@ const skills = ({ id }) => {
           <h3>Languages</h3>
           <div className={classes.icons}>
             <IconWithText style={iconStyle} component={SvgJavascript}>
-              Javascript
+              JavaScript
             </IconWithText>
             <IconWithText style={iconStyle} component={SvgJava}>
               Java
@@ -43,6 +45,9 @@ const skills = ({ id }) => {
             </IconWithText>
             <IconWithText style={iconStyle} component={SvgGatsby}>
               Gatsby
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgMobx}>
+              MobX
             </IconWithText>
           </div>
         </div>
@@ -61,6 +66,9 @@ const skills = ({ id }) => {
             </IconWithText>
             <IconWithText style={iconStyle} component={SvgMysql}>
               MySQL
+            </IconWithText>
+            <IconWithText style={iconStyle} component={SvgKubernetes}>
+              Kubernetes
             </IconWithText>
           </div>
         </div>

@@ -1,26 +1,18 @@
 .skills {
-  display: grid;
+  width: 100%;
   margin: 0 auto;
-  width: 80%;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  justify-content: center;
 
   .skill {
-    width: 100%;
-    display: grid;
     text-align: center;
-    grid-auto-rows: min-content;
-
+    margin-bottom: 16px;
     h3 {
       color: white;
-      font-size: 4rem;
+      font-size: 2.7rem;
       font-weight: bold;
     }
     .icons {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
       justify-content: center;
     }
   }

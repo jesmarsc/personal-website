@@ -6,6 +6,8 @@ import SvgSpring from './SvgSpring';
 import SvgJavascript from './SvgJavascript';
 import SvgNode from './SvgNode';
 import SvgFirebase from './SvgFirebase';
+import SvgMobx from './SvgMobx';
+import SvgKubernetes from './SvgKubernetes';
 import IconWithText from './IconWithText';
 
 export default IconWithText;
@@ -18,5 +20,7 @@ export {
   SvgSpring,
   SvgJavascript,
   SvgNode,
-  SvgFirebase
+  SvgFirebase,
+  SvgMobx,
+  SvgKubernetes
 };

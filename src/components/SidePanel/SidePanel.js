@@ -27,7 +27,7 @@ const SidePanel = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" activeClassName={classes.activeLink}>
+            <Link to="/about" activeClassName={classes.activeLink}>
               About Me
             </Link>
           </li>

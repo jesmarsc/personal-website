@@ -1,28 +1,45 @@
-import React from "react"
-import styles from "./about.module.css"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
-const about = ({ src, id }) => {
+import { Section } from '@components';
+import classes from './about.module.scss';
+
+const About = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      imageSharp(fluid: { originalName: { eq: "grad-image.jpg" } }) {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  `);
+  const fluid = data.imageSharp.fluid;
+
   return (
-    <div id={id} className={styles.row}>
-      <div className={styles.container}>
-        <img className={styles.image} alt="Graduation" src={src} />
-        <h1 className={styles.heading}>About Me</h1>
-        <span style={{ fontWeight: "700" }} className={styles.paragraph}>
-          B.S. in Computer Engineering - UCSB 2019
-        </span>
-        <span className={styles.paragraph}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          sagittis sem sed cursus sodales. Ut eget diam suscipit eros sagittis
-          hendrerit quis at augue. Vestibulum vestibulum turpis vitae libero
-          aliquam, non iaculis lectus fringilla. Aenean vitae magna rhoncus,
-          aliquam arcu sed, sodales libero. Donec a ex lectus. Mauris lobortis,
-          orci ac accumsan vehicula, nunc ipsum fringilla lacus, eu interdum
-          metus quam vel metus. Class aptent taciti sociosqu ad litora torquent
-          per conubia nostra, per inceptos himenaeos.
-        </span>
+    <Section title={'About Me'}>
+      <div className={classes.container}>
+        <Img fluid={fluid} className={classes.image} />
+        <p className={classes.paragraph}>
+          My name is Jesmar Castillo and I'm a software developer from Los
+          Angeles, California. I graduated from{' '}
+          <span className={classes.highlight}>UC Santa Barbara</span> in June
+          2019 with a{' '}
+          <span className={classes.highlight}>B.S in Computer Engineering</span>
+          . I have a personal interest in web development and cloud
+          technologies. I'm heavily dedicated to delivering work that focuses on
+          taking complex processes and turning them into simple and enjoyable
+          experiences. I'm currently looking for a software engineering position
+          in the Los Angeles or Santa Barbara area. If you have any questions,
+          please contact me at: <br />
+          <span className={classes.highlight}>Email:</span> jesmar@ucsb.edu{' '}
+          <br />
+          <span className={classes.highlight}>Phone:</span> (818) 376-9341
+        </p>
       </div>
-    </div>
-  )
-}
+    </Section>
+  );
+};
 
-export default about
+export default About;

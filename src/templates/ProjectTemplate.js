@@ -10,7 +10,7 @@ import classes from './ProjectTemplate.module.scss';
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-  const { title, path, github, website, description } = frontmatter;
+  const { title, path, github, website } = frontmatter;
   const featuredFluidImage = frontmatter.featuredImage.childImageSharp.fluid;
 
   return (

@@ -20,7 +20,7 @@ const navbar = () => {
         </li>
         <li>
           <Link
-            to="/"
+            to="/about"
             className={classes.menu__link}
             activeClassName={classes.active}
           >
