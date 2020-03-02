@@ -25,6 +25,7 @@
   min-height: 100vh;
   margin: 0px auto;
   border-radius: 8px;
+  margin-bottom: 50px;
 }
 
 .content {
@@ -41,22 +42,15 @@
   display: block;
 }
 
-body {
-  padding-bottom: 50px;
-}
-
 @media (min-width: 875px) {
-  body {
-    padding-bottom: 0px;
-  }
-
   .backgroundImage {
     filter: blur(16px);
   }
 
   .foreground {
-    grid-template-columns: 256px 1fr;
     width: 80%;
+    margin-bottom: 0px;
+    grid-template-columns: 256px 1fr;
   }
 
   .sidePanel {
