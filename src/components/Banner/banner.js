@@ -32,7 +32,7 @@ const banner = () => {
               <IconWithText component={FaFilePdf}>Resume</IconWithText>
             </a>
           </li>
-          <div className={styles.divider} />
+          <li className={styles.divider} />
           <li>
             <a
               href="https://github.com/jesmarsc"
