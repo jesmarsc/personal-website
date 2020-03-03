@@ -1,6 +1,6 @@
 ---
-path: '/projects/kube3d-v2'
-title: 'Kube3D v2'
+path: '/projects/kube3d-web'
+title: 'Kubernetes 3D Web'
 featuredImage: '../assets/kube3d-thumb.jpg'
 technologies: [React, Babylon.js, Kubernetes]
 github: https://github.com/jesmarsc/kube3d

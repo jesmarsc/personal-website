@@ -1,6 +1,6 @@
 ---
 path: '/projects/kubeko-v2'
-title: 'Kubeko v2'
+title: 'Kubernetes Sharing v2'
 featuredImage: '../assets/kubeko-thumb.jpg'
 technologies: [React, Node.js, Express, Firebase, Kubernetes]
 github: https://github.com/jesmarsc/kubeko-frontend
