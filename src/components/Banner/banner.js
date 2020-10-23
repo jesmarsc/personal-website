@@ -14,7 +14,9 @@ const banner = () => {
         backgroundImage: `url(${bannerCover})`
       }}
     >
-      <h1 className={styles.header}>Jesmar.</h1>
+      <h1 className={styles.header} style={{ fontFamily: 'Ubuntu' }}>
+        Jesmar
+      </h1>
       <nav className={styles.nav}>
         <ul>
           <li>
