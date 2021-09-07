@@ -1,1 +1,1 @@
-import 'fontsource-ubuntu';
+import '@fontsource/ubuntu';

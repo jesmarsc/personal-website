@@ -25,7 +25,7 @@ module.exports = {
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `browser`,
-        icon: `src/images/favicon.png` // This path is relative to the root of the site.
+        icon: `src/assets/favicon.png` // This path is relative to the root of the site.
       }
     },
     `gatsby-plugin-offline`,
@@ -35,6 +35,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
+          src: path.resolve(__dirname, 'src'),
           '@assets': path.resolve(__dirname, 'src/assets'),
           '@components': path.resolve(__dirname, 'src/components'),
           '@styles': path.resolve(__dirname, 'src/styles')
@@ -45,19 +46,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/markdown`
+        name: `projects`,
+        path: `${__dirname}/src/projects`
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/assets`
-      }
-    },
-    `gatsby-transformer-remark`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-transformer-remark`
+    `gatsby-plugin-mdx`
   ]
 };

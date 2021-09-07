@@ -1,0 +1,10 @@
+export { default as Banner } from './Banner/Banner';
+export { default as About } from './About/About';
+export { default as Navbar } from './Navigation/Navbar';
+export { default as Skills } from './Skills/Skills';
+export { default as SidePanel } from './SidePanel/SidePanel';
+export { default as IconWithText } from './Logos';
+export { default as Layout } from './Layout/Layout';
+export { default as SEO } from './SEO/SEO';
+export { default as ProjectsGrid } from './Projects/ProjectsGrid';
+export { default as Section } from './Section';

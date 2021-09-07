@@ -1,34 +1,15 @@
-const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-  const projectTemplate = path.resolve('src/templates/ProjectTemplate.js');
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
 
-  const result = await graphql(`
-    query MyQuery {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
-              title
-            }
-          }
-        }
-      }
-    }
-  `);
+  if (node.internal.type === 'Mdx') {
+    const value = createFilePath({ node, getNode, trailingSlash: false });
 
-  if (result.errors) {
-    reporter.panicOnBuild('Error while running GraphQL query.');
-    return;
-  }
-
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: projectTemplate,
-      context: {}
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/projects${value}`
     });
-  });
+  }
 };
