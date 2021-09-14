@@ -7,4 +7,3 @@ export { default as IconWithText } from './Logos';
 export { default as Layout } from './Layout/Layout';
 export { default as SEO } from './SEO/SEO';
 export { default as ProjectsGrid } from './Projects/ProjectsGrid';
-export { default as Section } from './Section';
