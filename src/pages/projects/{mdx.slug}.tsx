@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaCode, FaPlayCircle } from 'react-icons/fa';
+import { FaCode, FaPlayCircle, FaExternalLinkAlt } from 'react-icons/fa';
+import tw, { css, styled } from 'twin.macro';
 
 import { IconWithText, Layout, SEO } from '@components';
-import '@styles/reset.scss';
-import * as classes from './project.module.scss';
+import 'src/styles/reset.scss';
 
 const ProjectTemplate = ({ data }: any) => {
   const { mdx } = data;
@@ -16,55 +16,93 @@ const ProjectTemplate = ({ data }: any) => {
 
   return (
     <Fragment>
-      {/* <SEO title={title} path={path} /> */}
+      <SEO title={title} />
       <Layout>
         {image && (
-          <GatsbyImage className={classes.image} image={image} alt="NULL" />
+          <GatsbyImage
+            tw="w-full h-56 rounded-xl border border-solid border-highlight"
+            image={image}
+            alt="Image for project"
+          />
         )}
-        <h1 className={classes.content__title}>{title}</h1>
-        <nav className={classes.links}>
-          <ul>
+        <div tw="all-child:(not-first:(mt-1))">
+          <h1 tw="text-3xl mt-4 mb-2 font-bold">{title}</h1>
+
+          <ul tw="flex gap-1">
             {github && (
-              <li className={classes.link}>
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.button}
-                >
-                  <IconWithText component={FaCode}> Code</IconWithText>
-                </a>
+              <li>
+                <ExternalLink href={github}>
+                  <IconWithText icon={FaExternalLinkAlt}>Code</IconWithText>
+                </ExternalLink>
               </li>
             )}
             {website && (
-              <li className={classes.link}>
-                <a
-                  href={website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.button}
-                >
-                  <IconWithText component={FaPlayCircle}> Demo</IconWithText>
-                </a>
+              <li>
+                <ExternalLink href={website}>
+                  <IconWithText icon={FaExternalLinkAlt}>Demo</IconWithText>
+                </ExternalLink>
               </li>
             )}
           </ul>
-        </nav>
-        <ul className={classes.technologies}>
-          {technologies.map((technology: any) => {
-            return (
-              <li key={technology} className={classes.technology}>
+
+          <ul tw="flex flex-wrap gap-1">
+            {technologies.map((technology: any) => (
+              <li tw="bg-primary-dark px-4 py-1 rounded" key={technology}>
                 {technology}
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+        </div>
 
-        <MDXRenderer>{body}</MDXRenderer>
+        <MarkdownContainer>
+          <MDXRenderer>{body}</MDXRenderer>
+        </MarkdownContainer>
       </Layout>
     </Fragment>
   );
 };
+
+const ExternalLink = styled('a').attrs(() => ({
+  target: '_blank',
+  rel: 'noreferrer noopener'
+}))(
+  tw`block rounded px-4 py-1 bg-primary-dark transition-shadow hover:shadow-highlight`
+);
+
+const MarkdownContainer = styled('div')(
+  () =>
+    css`
+      ${tw`all-child:(my-10)`}
+
+      section {
+        ${tw`all-child:(not-first:(my-6))`}
+      }
+
+      h2 {
+        ${tw`text-2xl font-semibold`}
+      }
+
+      h3 {
+        ${tw`text-lg font-semibold`}
+      }
+
+      h4 {
+        ${tw`font-semibold`}
+      }
+
+      p {
+        ${tw`my-2!`}
+      }
+
+      a {
+        ${tw`text-highlight`}
+      }
+
+      ul {
+        ${tw`my-2! ml-4`}
+      }
+    `
+);
 
 export const query = graphql`
   query ($id: String) {

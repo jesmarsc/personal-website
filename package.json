@@ -4,6 +4,11 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -25,19 +30,26 @@
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-sass": "^4.13.0",
     "gatsby-plugin-sharp": "^3.13.0",
+    "gatsby-plugin-styled-components": "^4.13.0",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-sharp": "^3.13.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
-    "sass": "^1.39.0"
+    "sass": "^1.39.0",
+    "styled-components": "^5.3.1",
+    "tailwindcss": "^2.2.10",
+    "twin.macro": "^2.7.0"
   },
   "devDependencies": {
     "@types/node": "^16.7.11",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "@types/react-helmet": "^6.1.2",
+    "@types/styled-components": "^5.1.14",
+    "color": "^4.0.1",
+    "gatsby-plugin-remove-trailing-slashes": "^3.13.0",
     "prettier": "^2.3.2",
     "typescript": "^4.4.2"
   },

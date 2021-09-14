@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-
-import * as classes from './SidePanel.module.scss';
+import tw, { styled } from 'twin.macro';
 
 const SidePanel = () => {
   const data = useStaticQuery(graphql`
@@ -23,41 +22,37 @@ const SidePanel = () => {
   const nodes = data.allMdx.nodes;
 
   return (
-    <div className={classes.sidePanel}>
-      <nav>
-        <ul className={classes.sidePanel__menu}>
-          <li>
-            <Link to="/" activeClassName={classes.activeLink}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" activeClassName={classes.activeLink}>
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" activeClassName={classes.activeLink}>
-              Projects
-            </Link>
-            <ul className={classes.sidePanel__projects}>
-              {nodes.map(
-                ({ id, fields: { slug }, frontmatter: { title } }: any) => {
-                  return (
-                    <li key={id}>
-                      <Link to={slug} activeClassName={classes.activeLink}>
-                        {title}
-                      </Link>
-                    </li>
-                  );
-                }
-              )}
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav tw="sticky top-0 p-4">
+      <ul tw="all-child:(py-4 not-first:(border-t border-solid border-highlight))">
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/about">About Me</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/projects">Projects</NavLink>
+          <ul tw="ml-4 text-base">
+            {nodes.map(
+              ({ id, fields: { slug }, frontmatter: { title } }: any) => {
+                return (
+                  <li key={id}>
+                    <NavLink to={slug}>{title}</NavLink>
+                  </li>
+                );
+              }
+            )}
+          </ul>
+        </li>
+      </ul>
+    </nav>
   );
 };
+
+const NavLink = styled(Link).attrs((props) => ({
+  activeStyle: tw`text-highlight`
+}))(tw`transition-colors hover:(text-highlight)`);
 
 export default SidePanel;

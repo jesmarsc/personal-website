@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
-import { Banner, SEO } from '@components';
+import { GlobalStyles } from 'twin.macro';
 
-import '@styles/reset.scss';
+import { Banner, SEO } from '@components';
 
 const Home = () => (
   <Fragment>
     <SEO />
+    <GlobalStyles />
     <Banner />
   </Fragment>
 );

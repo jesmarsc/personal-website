@@ -43,7 +43,6 @@ const SEO = ({ title, description, path }: Props) => {
       {seo.description && (
         <meta name="twitter:description" content={seo.description} />
       )}
-      <style>{'body { background-color: #272262;'}</style>
     </Helmet>
   );
 };

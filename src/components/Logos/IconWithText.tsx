@@ -1,13 +1,13 @@
-import React from 'react';
-import * as classes from './IconWithText.module.scss';
+import React, { FunctionComponent } from 'react';
+import 'twin.macro';
 
-const IconWithText = ({ component, className, style, children }: any) => {
-  const Component = component;
+const IconWithText: FunctionComponent<{ icon: any }> = ({ icon, children }) => {
+  const Icon = icon;
   return (
-    <div className={className} style={style}>
-      <Component className={classes.icon} />
-      <p className={classes.text}>{children}</p>
-    </div>
+    <span tw="flex items-center svg:(mr-2)">
+      <Icon />
+      <p>{children}</p>
+    </span>
   );
 };
 

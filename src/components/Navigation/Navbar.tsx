@@ -1,46 +1,39 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FaHome, FaUserCircle, FaCode } from 'react-icons/fa';
+import tw, { styled } from 'twin.macro';
 
-import * as classes from './Navbar.module.scss';
-
-const navbar = () => {
+const Navbar = () => {
   return (
-    <nav className={classes.nav}>
-      <ul className={classes.menu}>
+    <nav tw="w-screen text-white text-xs">
+      <ul tw="flex justify-evenly bg-primary">
         <li>
-          <Link
-            to="/"
-            className={classes.menu__link}
-            activeClassName={classes.active}
-          >
-            <FaHome className={classes.menu__linkIcon} />
-            <p className={classes.menu__linkText}>Home</p>
-          </Link>
+          <NavLink to="/">
+            <FaHome />
+            <span>Home</span>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="/about"
-            className={classes.menu__link}
-            activeClassName={classes.active}
-          >
-            <FaUserCircle className={classes.menu__linkIcon} />
-            <p className={classes.menu__linkText}>About Me</p>
-          </Link>
+          <NavLink to="/projects">
+            <FaCode />
+            <span>Projects</span>
+          </NavLink>
         </li>
         <li>
-          <Link
-            to="/projects"
-            className={classes.menu__link}
-            activeClassName={classes.active}
-          >
-            <FaCode className={classes.menu__linkIcon} />
-            <p className={classes.menu__linkText}>Projects</p>
-          </Link>
+          <NavLink to="/about">
+            <FaUserCircle />
+            <span>About Me</span>
+          </NavLink>
         </li>
       </ul>
     </nav>
   );
 };
 
-export default navbar;
+const NavLink = styled(Link).attrs(() => ({
+  activeStyle: tw`text-highlight`
+}))(
+  tw`flex flex-col items-center p-2 transition-colors hover:(text-highlight) svg:(text-xl)`
+);
+
+export default Navbar;

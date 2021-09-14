@@ -1,30 +1,33 @@
-import React, { Fragment, FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
+import { GlobalStyles } from 'twin.macro';
 
 import { SidePanel, Navbar } from '@components';
 import bannerCover from '@assets/banner.svg';
-import * as classes from './Layout.module.scss';
 
 const Layout: FunctionComponent = ({ children }) => {
   return (
-    <Fragment>
-      <div className={classes.navbar}>
-        <Navbar />
-      </div>
-      <div className={classes.background}>
-        <div
-          className={classes.backgroundImage}
-          style={{
-            backgroundImage: `url(${bannerCover})`
-          }}
-        />
-      </div>
-      <div className={classes.foreground}>
-        <div className={classes.sidePanel}>
+    <div tw="font-family[Ubuntu]">
+      <GlobalStyles />
+
+      <div
+        tw="fixed inset-0 bg-cover bg-center blur z-index[-1]"
+        style={{
+          backgroundImage: `url(${bannerCover})`
+        }}
+      />
+
+      <div tw="flex mx-auto max-w-5xl min-h-screen text-base text-white bg-black bg-opacity-70">
+        <div tw="hidden md:block w-64 flex-shrink-0 border-r border-solid border-highlight">
           <SidePanel />
         </div>
-        <div className={classes.content}>{children}</div>
+
+        <div tw="p-4">{children}</div>
       </div>
-    </Fragment>
+
+      <div tw="sticky bottom-0 md:hidden">
+        <Navbar />
+      </div>
+    </div>
   );
 };
 

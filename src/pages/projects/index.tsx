@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import 'twin.macro';
 
 import { Layout, SEO, ProjectsGrid } from '@components';
 
@@ -7,11 +8,7 @@ const Projects = () => {
     <Fragment>
       <SEO title={'Projects'} path={'/projects'} />
       <Layout>
-        <h1
-          style={{ margin: '16px 0px', textAlign: 'center', fontSize: '4rem' }}
-        >
-          Projects
-        </h1>
+        <h1 tw="text-center text-4xl font-bold m-4">Projects</h1>
         <ProjectsGrid />
       </Layout>
     </Fragment>
