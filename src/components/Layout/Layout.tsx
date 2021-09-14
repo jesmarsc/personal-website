@@ -6,7 +6,7 @@ import bannerCover from 'src/assets/banner.svg';
 
 const Layout: FunctionComponent = ({ children }) => {
   return (
-    <div tw="font-family[Ubuntu]">
+    <div>
       <div
         tw="fixed inset-0 bg-cover bg-center blur z-index[-1]"
         style={{
