@@ -2,11 +2,10 @@ import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { FaCode, FaPlayCircle, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import tw, { css, styled } from 'twin.macro';
 
-import { IconWithText, Layout, SEO } from '@components';
-import 'src/styles/reset.scss';
+import { IconWithText, Layout, SEO } from 'src/components';
 
 const ProjectTemplate = ({ data }: any) => {
   const { mdx } = data;

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import 'twin.macro';
 
-import { Layout, SEO, ProjectsGrid } from '@components';
+import { Layout, SEO, ProjectsGrid } from 'src/components';
 
 const Projects = () => {
   return (

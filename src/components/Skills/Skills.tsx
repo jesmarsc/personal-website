@@ -1,5 +1,5 @@
 import React from 'react';
-import tw, { styled } from 'twin.macro';
+import tw from 'twin.macro';
 
 import {
   SvgGatsby,
@@ -49,16 +49,12 @@ const Skills = () => {
   );
 };
 
-const Container = styled('div')(
-  tw`p-6 rounded-lg bg-black bg-opacity-80 all-child:(not-first:(mt-8))`
-);
+const Container = tw.div`p-6 rounded-lg bg-black bg-opacity-80 all-child:(not-first:(mt-8))`;
 
-const Category = styled('div')(tw`flex flex-col items-center`);
+const Category = tw.div`flex flex-col items-center`;
 
-const CategoryTitle = styled('h3')(tw`text-2xl font-semibold mb-2`);
+const CategoryTitle = tw.h3`text-2xl font-semibold mb-2`;
 
-const CategorySkills = styled('div')(
-  tw`flex flex-wrap justify-center text-2xl all-child:(flex items-center mx-3)`
-);
+const CategorySkills = tw.div`flex flex-wrap justify-center text-2xl all-child:(flex items-center mx-3)`;
 
 export default Skills;

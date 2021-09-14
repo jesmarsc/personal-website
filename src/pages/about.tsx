@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import 'twin.macro';
 
-import { Layout, SEO, Skills, About } from '@components';
+import { Layout, SEO, Skills, About } from 'src/components';
 
 const about = () => {
   return (

@@ -1,14 +1,12 @@
 import React, { FunctionComponent } from 'react';
-import { GlobalStyles } from 'twin.macro';
+import 'twin.macro';
 
-import { SidePanel, Navbar } from '@components';
-import bannerCover from '@assets/banner.svg';
+import { SidePanel, Navbar } from 'src/components';
+import bannerCover from 'src/assets/banner.svg';
 
 const Layout: FunctionComponent = ({ children }) => {
   return (
     <div tw="font-family[Ubuntu]">
-      <GlobalStyles />
-
       <div
         tw="fixed inset-0 bg-cover bg-center blur z-index[-1]"
         style={{

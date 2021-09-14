@@ -25,31 +25,19 @@ const Banner = () => {
             </LocalLink>
           </li>
           <li>
-            <ExternalLink
-              href={'./jesmar-castillo-resume.pdf'}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <ExternalLink href={'./jesmar-castillo-resume.pdf'}>
               <FaFilePdf />
               <span>Resume</span>
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink
-              href="https://github.com/jesmarsc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <ExternalLink href="https://github.com/jesmarsc">
               <FaGithub />
               <span>Github</span>
             </ExternalLink>
           </li>
           <li>
-            <ExternalLink
-              href="https://www.linkedin.com/in/jesmar-castillo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <ExternalLink href="https://www.linkedin.com/in/jesmar-castillo">
               <FaLinkedin />
               <span>LinkedIn</span>
             </ExternalLink>
@@ -60,10 +48,14 @@ const Banner = () => {
   );
 };
 
-const ExternalLink = styled('a')(() => [
+const ExternalLink = styled('a').attrs(() => ({
+  target: '_blank',
+  rel: 'noopener noreferrer'
+}))(() => [
   tw`flex items-center justify-center py-2 px-4 rounded svg:mr-2`,
   tw`transition-colors hover:(text-highlight bg-primary)`
 ]);
+
 const LocalLink = ExternalLink.withComponent(Link);
 
 export default Banner;

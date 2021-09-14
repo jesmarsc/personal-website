@@ -44,7 +44,11 @@ const ProjectsGrid = () => {
               to={slug}
             >
               {image && (
-                <GatsbyImage tw="h-full w-full" image={image} alt="NULL" />
+                <GatsbyImage
+                  tw="h-full w-full"
+                  image={image}
+                  alt="Image for project."
+                />
               )}
               <h3 tw="absolute top-0 px-4 py-1 bg-primary-dark rounded-br-xl">
                 {title}

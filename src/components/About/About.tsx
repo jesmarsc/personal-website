@@ -1,22 +1,9 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import tw, { styled } from 'twin.macro';
+import tw from 'twin.macro';
 
 const About = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     imageSharp(fluid: { originalName: { eq: "grad-image.jpg" } }) {
-  //       fluid(maxWidth: 800) {
-  //         ...GatsbyImageSharpFluid
-  //       }
-  //     }
-  //   }
-  // `);
-  // const fluid = data.imageSharp.fluid;
-
   return (
     <div tw="p-4 rounded-lg bg-black bg-opacity-80">
-      {/* <Img fluid={fluid} className={classes.image} /> */}
       <p>
         My name is Jesmar Castillo and I'm a software developer from Los
         Angeles, California. I graduated from{' '}
@@ -40,6 +27,6 @@ const About = () => {
   );
 };
 
-const Highlight = styled('span')(tw`text-highlight font-semibold`);
+const Highlight = tw.span`text-highlight font-semibold`;
 
 export default About;
