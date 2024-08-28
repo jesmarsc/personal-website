@@ -1,0 +1,42 @@
+.SDF__container {
+  --sdf-gap: 0.5rem;
+
+  @screen lg {
+    --sdf-gap: 2rem;
+  }
+
+  img {
+    @apply object-cover;
+  }
+}
+
+.SDF {
+  @apply grid overflow-hidden relative gap-[var(--sdf-gap)];
+
+  grid-template-areas:
+    "title"
+    "a"
+    "b"
+    "c";
+
+  @screen lg {
+    @apply grid-cols-2;
+
+    grid-template-areas:
+      "a b"
+      "a title"
+      "a c";
+  }
+}
+
+.HorizontalSection {
+  @apply grid lg:grid-cols-2 mt-[var(--sdf-gap)] gap-[var(--sdf-gap)];
+
+  p {
+    @apply relative font-title-serif uppercase text-7xl leading-none tracking-tighter;
+  }
+
+  a {
+    @apply overflow-hidden;
+  }
+}

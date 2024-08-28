@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/features/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -12,6 +13,28 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        red: {
+          light: "#dc2626",
+          dark: "#be0505",
+        },
+      },
+      data: {
+        active: 'active~="true"',
+      },
+      dropShadow: {
+        outline: "-0.05em 0.05em 0px black",
+      },
+      fontFamily: {
+        title: ["var(--font-title)", "serif"],
+        "title-serif": ["var(--font-title-serif)", "serif"],
+      },
+      fontSize: {
+        "8.5xl": ["7rem", "1"],
+      },
+      maxWidth: {
+        body: "100rem",
       },
     },
   },

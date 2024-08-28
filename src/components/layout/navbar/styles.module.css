@@ -1,0 +1,7 @@
+.NavMenu {
+  @apply flex items-center tracking-tighter uppercase font-title-serif text-xl;
+
+  a {
+    @apply px-4 py-2 data-active:text-black data-active:bg-white;
+  }
+}
