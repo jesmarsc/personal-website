@@ -8,6 +8,9 @@ import { Link } from "@/components/link";
 
 import { links } from "@/constants";
 
+import githubIcon from "@/assets/icons/logo-github.svg";
+import openOutlineIcon from "@/assets/icons/open-outline.svg";
+
 import stellerNetworkVisualizerImg from "../../assets/stellar-network-visualizer.webp";
 import sortingVisualizerImg from "../../assets/sorting-visualizer.webp";
 
@@ -34,10 +37,8 @@ export const Personal = (props: React.ComponentPropsWithoutRef<"div">) => {
           title="Stellar Network Visualizer"
           src={stellerNetworkVisualizerImg}
           techStack={["React", "Three.js"]}
-          links={{
-            Github: links.STELLAR_3D_GITHUB,
-            Website: links.STELLAR_3D,
-          }}
+          github={links.STELLAR_VISUALIZER_GITHUB}
+          href={links.STELLAR_VISUALIZER}
         >
           Explore the cosmos with this interactive 3D visualization of the
           Stellar Network! Navigate through the stars, view real-time activity,
@@ -51,10 +52,8 @@ export const Personal = (props: React.ComponentPropsWithoutRef<"div">) => {
           title="Sorting Visualizer"
           src={sortingVisualizerImg}
           techStack={["React", "Canvas", "Valtio"]}
-          links={{
-            Github: links.SORTING_VISUALIZER_GITHUB,
-            Website: links.SORTING_VISUALIZER,
-          }}
+          github={links.SORTING_VISUALIZER_GITHUB}
+          href={links.SORTING_VISUALIZER}
         >
           Discover the beauty of algorithms with this interactive website that
           visualizes sorting techniques. Watch as a bar graph dynamically
@@ -69,15 +68,26 @@ export const Personal = (props: React.ComponentPropsWithoutRef<"div">) => {
 
 type ProjectCardProps = React.ComponentPropsWithRef<"div"> & {
   isVisible?: boolean;
-  links: { [label: string]: string };
   src: ImageProps["src"];
   techStack: string[];
   title: string;
+  github: string;
+  href: string;
 };
 
 const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
   (
-    { children, className, links, src, techStack, title, isVisible, ...props },
+    {
+      children,
+      className,
+      src,
+      techStack,
+      title,
+      isVisible,
+      github,
+      href,
+      ...props
+    },
     ref
   ) => {
     return (
@@ -113,17 +123,27 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
             />
           </div>
 
-          <div className="max-w-xl my-4 tracking-tighter font-light space-y-2 even:*:text-gray-300 sm:group-odd:text-right sm:group-odd:ml-auto">
-            <p>{techStack.join(" · ")}</p>
-
-            <p className="leading-none">{children}</p>
-
-            <div className="flex gap-2 sm:group-odd:justify-end">
-              {Object.entries(links).map(([label, href]) => (
-                <Link key={label} href={href}>
-                  {label}
-                </Link>
+          <div className="max-w-xl mt-4 sm:mt-8 font-light space-y-2 sm:space-y-4 sm:group-odd:text-right sm:group-odd:ml-auto">
+            <div className="flex gap-1 sm:group-odd:justify-end">
+              {techStack.map((tech) => (
+                <p key={tech} className="bg-white/10 px-4 rounded-full">
+                  {tech}
+                </p>
               ))}
+            </div>
+
+            <p className="leading-none text-gray-300">{children}</p>
+
+            <div className="flex gap-4 sm:group-odd:justify-end">
+              <Link href={github} className="flex items-center gap-1">
+                <Image src={githubIcon} alt="" className="size-5" />
+                Github
+              </Link>
+
+              <Link href={href} className="flex items-center gap-1">
+                <Image src={openOutlineIcon} alt="" className="size-5" />
+                Website
+              </Link>
             </div>
           </div>
         </div>

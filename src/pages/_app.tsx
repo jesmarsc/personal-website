@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { Anton, Playfair_Display } from "next/font/google";
 
 import { Navbar } from "@/components/layout/navbar";
+import { SEO } from "@/components/seo";
 
 const title = Anton({ subsets: ["latin"], weight: ["400"] });
 
@@ -20,6 +21,8 @@ export default function App({ Component, pageProps }: AppProps) {
           --font-title-serif: ${title_serif.style.fontFamily};
         }
       `}</style>
+
+      <SEO />
 
       <Navbar />
 

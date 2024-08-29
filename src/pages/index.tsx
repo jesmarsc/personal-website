@@ -17,11 +17,14 @@ export default function Home() {
             Jesmar Castillo
           </h2>
 
-          <p className="font-thin text-2xl tracking-tighter">
+          <p className="font-thin text-2xl tracking-tighter text-neutral-300">
             Web Developer, based in Los Angeles
           </p>
 
-          <a className="text-neutral-300" href="mailto:contact@jesmar.dev">
+          <a
+            className="text-neutral-300 italic"
+            href="mailto:contact@jesmar.dev"
+          >
             contact@jesmar.dev
           </a>
         </div>
