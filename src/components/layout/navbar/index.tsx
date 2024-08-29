@@ -18,7 +18,9 @@ export function Navbar() {
         "sm:my-8"
       )}
     >
-      <span className="font-title-serif text-6xl uppercase">Jesmar</span>
+      <Link href={routes.HOME} className="font-title-serif text-6xl uppercase">
+        Jesmar
+      </Link>
 
       <div className={styles.NavMenu}>
         <Link href={routes.HOME}>Home</Link>
