@@ -7,9 +7,9 @@ export const links = Object.freeze({
   RPCIEGE: "https://rpciege.com/",
   SCF: "https://communityfund.stellar.org/",
   SORTING_VISUALIZER_GITHUB: "https://github.com/jesmarsc/sorting-visualizer",
-  SORTING_VISUALIZER: "https://sorting-algorithms.netlify.com/",
+  SORTING_VISUALIZER: "https://sort.jesmar.dev/",
   STELLAR_DOCS: "https://developers.stellar.org/docs",
   STELLAR_QUEST: "https://quest.stellar.org/",
   STELLAR_VISUALIZER_GITHUB: "https://github.com/jesmarsc/stellar3d/tree/main",
-  STELLAR_VISUALIZER: "https://stellar3d.netlify.app/",
+  STELLAR_VISUALIZER: "https://space.jesmar.dev/",
 });
