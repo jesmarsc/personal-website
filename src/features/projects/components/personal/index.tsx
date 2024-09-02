@@ -134,7 +134,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectCardProps>(
 
             <p className="leading-none text-gray-300">{children}</p>
 
-            <div className="flex gap-4 sm:group-odd:justify-end">
+            <div className="flex gap-4 sm:group-odd:justify-end text-lg">
               <Link href={github} className="flex items-center gap-1">
                 <Image src={githubIcon} alt="" className="size-5" />
                 Github

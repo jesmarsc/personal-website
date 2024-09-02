@@ -25,10 +25,10 @@ export function Navbar() {
       <div className={styles.NavMenu}>
         <Link href={routes.HOME}>Home</Link>
         <Link href={routes.PROJECTS}>Projects</Link>
-        <Link href={links.GITHUB}>
+        <Link href={links.GITHUB} aria-label="GitHub">
           <Image src={githubIcon} alt="" className="size-6" />
         </Link>
-        <Link href={links.LINKEDIN}>
+        <Link href={links.LINKEDIN} aria-label="LinkedIn">
           <Image src={linkedinIcon} alt="" className="size-6" />
         </Link>
       </div>

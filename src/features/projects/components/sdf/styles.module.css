@@ -11,7 +11,7 @@
 }
 
 .SDF {
-  @apply grid overflow-hidden relative gap-[var(--sdf-gap)];
+  @apply grid relative gap-[var(--sdf-gap)];
 
   grid-template-areas:
     "title"
@@ -33,10 +33,6 @@
   @apply grid lg:grid-cols-2 mt-[var(--sdf-gap)] gap-[var(--sdf-gap)];
 
   p {
-    @apply relative font-title-serif uppercase text-7xl leading-none tracking-tighter;
-  }
-
-  a {
-    @apply overflow-hidden;
+    @apply relative z-10 font-title-serif uppercase text-7xl leading-none tracking-tighter sm:mx-4;
   }
 }
