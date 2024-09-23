@@ -1,4 +1,5 @@
 export const links = Object.freeze({
+  EMAIL: "mailto:contact@jesmar.dev",
   FCAOOC: "https://fastcheapandoutofcontrol.com/",
   GITHUB: "https://github.com/jesmarsc",
   LINKEDIN: "https://www.linkedin.com/in/jesmar-castillo/",

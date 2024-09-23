@@ -1,37 +1,23 @@
-import clsx from "clsx";
-import Image from "next/image";
-
 import { links, routes } from "@/constants";
 
-import { Link } from "@/components/link";
+import { Link, ArrowLink } from "@/components/link";
 
 import styles from "./styles.module.css";
 
-import githubIcon from "@/assets/icons/logo-github.svg";
-import linkedinIcon from "@/assets/icons/logo-linkedin.svg";
-
 export function Navbar() {
   return (
-    <nav
-      className={clsx(
-        "flex flex-wrap [align-items:last_baseline] gap-x-8 gap-y-4 max-w-body mx-auto justify-between my-4 px-4",
-        "sm:my-8"
-      )}
-    >
-      <Link href={routes.HOME} className="font-title-serif text-6xl uppercase">
-        Jesmar
-      </Link>
+    <div className="sticky top-0 z-10 bg-black/60 backdrop-blur py-4">
+      <nav className="flex flex-wrap items-center gap-4 max-w-body mx-auto justify-between px-4 text-sm">
+        <Link href={routes.HOME}>
+          Jesmar <span className="max-sm:hidden">Castillo</span>
+        </Link>
 
-      <div className={styles.NavMenu}>
-        <Link href={routes.HOME}>Home</Link>
-        <Link href={routes.PROJECTS}>Projects</Link>
-        <Link href={links.GITHUB} aria-label="GitHub">
-          <Image src={githubIcon} alt="" className="size-6" />
-        </Link>
-        <Link href={links.LINKEDIN} aria-label="LinkedIn">
-          <Image src={linkedinIcon} alt="" className="size-6" />
-        </Link>
-      </div>
-    </nav>
+        <div className={styles.NavMenu}>
+          <ArrowLink href={links.EMAIL}>Email</ArrowLink>
+          <ArrowLink href={links.GITHUB}>GitHub</ArrowLink>
+          <ArrowLink href={links.LINKEDIN}>LinkedIn</ArrowLink>
+        </div>
+      </nav>
+    </div>
   );
 }

@@ -34,7 +34,7 @@ const config: Config = {
         "8.5xl": ["7rem", "1"],
       },
       maxWidth: {
-        body: "100rem",
+        body: "90rem",
       },
     },
   },

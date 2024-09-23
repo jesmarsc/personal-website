@@ -1,7 +1,10 @@
 import { forwardRef } from "react";
 import { usePathname } from "next/navigation";
 import NextLink from "next/link";
+import Image from "next/image";
 import clsx from "clsx";
+
+import arrowIcon from "@/assets/icons/arrow.svg";
 
 export type LinkProps = React.ComponentPropsWithoutRef<typeof NextLink>;
 
@@ -29,3 +32,25 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
     />
   );
 });
+
+type ArrowLinkProps = React.ComponentPropsWithoutRef<typeof Link>;
+
+export const ArrowLink = ({
+  className,
+  children,
+  ...props
+}: ArrowLinkProps) => {
+  return (
+    <Link
+      {...props}
+      className={clsx(className, "group flex items-center gap-2")}
+    >
+      {children}
+      <Image
+        src={arrowIcon}
+        alt=""
+        className="group-hover:rotate-45 size-[0.65em] transition-transform"
+      />
+    </Link>
+  );
+};
