@@ -97,7 +97,7 @@ export default function Home() {
 
         <Card
           date="2024"
-          description="Discover the beauty of algorithms with this interactive website thatvisualizes sorting techniques."
+          description="Discover the beauty of algorithms with this interactive website that visualizes sorting techniques."
           src={sortingImg}
           technologies={["React", "Vite", "Canvas"]}
           title="Sorting Visualizer"
