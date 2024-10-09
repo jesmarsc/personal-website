@@ -44,12 +44,7 @@ export const Card = ({
       </div>
 
       <Link href={href} aria-label={title}>
-        <Image
-          src={src}
-          alt=""
-          className="mt-6 rounded-lg md:rounded-3xl"
-          sizes="(max-width: 1440px) calc(100vw - 2rem), 1440px"
-        />
+        <Image src={src} alt="" className="mt-6 rounded-lg md:rounded-3xl" />
       </Link>
     </div>
   );
