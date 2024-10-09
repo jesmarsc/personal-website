@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -27,6 +28,7 @@ const config: Config = {
         outline: "-0.05em 0.05em 0px black",
       },
       fontFamily: {
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         title: ["var(--font-title)", "serif"],
         "title-serif": ["var(--font-title-serif)", "serif"],
       },

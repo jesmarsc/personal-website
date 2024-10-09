@@ -1,4 +1,5 @@
-import { Card } from "@/features/projects/components/card";
+import { Card } from "@/components/card";
+import { ArrowLink } from "@/components/arrow-link";
 
 import rpciegeImg from "@/features/projects/assets/rpciege.webp";
 import fca00cImg from "@/features/projects/assets/fca00c.webp";
@@ -9,7 +10,6 @@ import stellarNetworkVisualizerImg from "@/features/projects/assets/stellar-netw
 import sortingImg from "@/features/projects/assets/sorting-visualizer.webp";
 
 import { links } from "@/constants";
-import { ArrowLink } from "@/components/link";
 
 export default function Home() {
   return (
@@ -86,9 +86,7 @@ export default function Home() {
 
         <Card
           date="2024"
-          description="Navigate through the stars, view real-time activity,
-            and discover the dynamic world of Stellar in an engaging and immersive
-            experience."
+          description="Navigate through the stars, view real-time activity, and discover the dynamic world of Stellar in an engaging and immersive experience."
           src={stellarNetworkVisualizerImg}
           technologies={["React", "Vite", "Three.js"]}
           title="Stellar Network Visualizer"

@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import Image, { ImageProps } from "next/image";
 
-import styles from "./styles.module.css";
 import { LinkProps } from "next/link";
 import { Link } from "@/components/link";
 
@@ -28,11 +27,11 @@ export const Card = ({
       {...props}
       className={clsx(props.className, "pt-6 border-t border-neutral-700")}
     >
-      <div className={styles.Card__header}>
+      <div className="grid items-start gap-2 md:gap-8 md:grid-cols-[auto_minmax(20ch,1fr)_3fr_auto]">
         <p className="text-sm text-neutral-400">{date}</p>
 
         <Link href={href} className="max-w-max">
-          <h4 className="cursor-pointer text-2xl font-semibold underline underline-offset-8 decoration-neutral-700 hover:decoration-white transition-all">
+          <h4 className="cursor-pointer text-2xl font-medium underline underline-offset-8 decoration-neutral-700 hover:decoration-white transition-all">
             {title}
           </h4>
         </Link>
@@ -45,7 +44,12 @@ export const Card = ({
       </div>
 
       <Link href={href} aria-label={title}>
-        <Image src={src} alt="" className="mt-6 rounded-lg md:rounded-3xl" />
+        <Image
+          src={src}
+          alt=""
+          className="mt-6 rounded-lg md:rounded-3xl"
+          sizes="(max-width: 1440px) calc(100vw - 2rem), 1440px"
+        />
       </Link>
     </div>
   );

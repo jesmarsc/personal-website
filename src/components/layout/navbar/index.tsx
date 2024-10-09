@@ -1,6 +1,7 @@
 import { links, routes } from "@/constants";
 
-import { Link, ArrowLink } from "@/components/link";
+import { Link } from "@/components/link";
+import { ArrowLink } from "@/components/arrow-link";
 
 import styles from "./styles.module.css";
 
